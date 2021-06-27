@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm Ming, a software engineer in the NYC area who interested in building scalable systems for human-centered products. My ever-growing list of hobbies currently include take care of plants, cooking, making espresso, and latte art.
+I'm Ming, a software engineer in the NYC area who's interested in building scalable systems for human-centered products. My ever-growing list of hobbies currently include take care of plants, cooking, making espresso, and latte art.
 
 🏹 I am currently...
 
