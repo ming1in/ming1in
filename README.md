@@ -13,11 +13,10 @@ I'm Ming, a software engineer in the NYC area who interested in building scalabl
 - Email: minglianglin50@gmail.com
 
 
-## Quick overview
-* GitHub stats:  
+## Fun Stats  
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ming1in&langs_count=8" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ming1in&langs_count=5" />
 </a>
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=ming1in&show_icons=true&line_height=27&include_all_commits=true" alt="My github stats" />
