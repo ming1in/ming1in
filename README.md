@@ -2,11 +2,11 @@
 
 I'm Ming, a software engineer in the NYC area who interested in building scalable systems for human-centered products. My ever-growing list of hobbies currently include take care of plants, cooking, making espresso, and latte art.
 
-🏃🏻‍♂️ I am currently...
+🏹 I am currently...
 
 - 🏥 interning at Wellsheet, a healthtech startup working to reduce physician burnout and improving patient care
 - 🌱 attending Stevens Institute of Technology as a senior computer science student
-- 🛠 working on project as a freelancer
+- 📚 learning about machine learning and database architecture
 
 📫 How to reach me:
 - Linkedin: www.linkedin.com/in/minglin1050
