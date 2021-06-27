@@ -6,7 +6,7 @@ I'm Ming, a software engineer in the NYC area who's interested in building scala
 
 - 🏥 interning at Wellsheet, a healthtech startup working to reduce physician burnout and improving patient care
 - 🌱 attending Stevens Institute of Technology as a senior computer science student
-- 📚 learning about machine learning and database architecture
+- 📚 learning about ML and software architecture
 
 📫 How to reach me:
 - Linkedin: www.linkedin.com/in/minglin1050
