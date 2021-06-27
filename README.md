@@ -14,9 +14,9 @@ I'm Ming, a software engineer in the NYC area who's interested in building scala
 
 
 ## Fun Stats  
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=ming1in&show_icons=true&line_height=27&include_all_commits=true" alt="My github stats" />
-</a>  
+<p align="center">
+  <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=ming1in&show_icons=true&line_height=27&include_all_commits=true&&theme=dark" alt="My github stats" />
+</p>  
 
 <!--
  <a href="https://github.com/anuraghazra/github-readme-stats">
