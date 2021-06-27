@@ -2,7 +2,7 @@
 
 I'm Ming, a software engineer in the NYC area who interested in building scalable systems for human-centered products. My ever-growing list of hobbies currently include take care of plants and espresso & latte art.
 
-⚡ I am currently...
+🏃🏻‍♂️ I am currently...
 
 - 🏥 interning at Wellsheet, a healthtech startup working to reduce physician burnout and improving patient care
 - 🌱 attending Stevens Institute of Technology as a senior computer science student
@@ -13,14 +13,14 @@ I'm Ming, a software engineer in the NYC area who interested in building scalabl
 - Email: minglianglin50@gmail.com
 
 
-## Fun Stats  
+<!-- ## Fun Stats  
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ming1in&langs_count=5" />
 </a>
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=ming1in&show_icons=true&line_height=27&include_all_commits=true" alt="My github stats" />
-</a> 
+</a>  -->
 
 <!--
 **ming1in/ming1in** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
