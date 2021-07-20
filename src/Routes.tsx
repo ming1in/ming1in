@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
-import { LazyExoticComponent } from "react";
-import HomeView from "./views/HomeView";
-import LoadingView from "./views/LoadingView";
+import React, { Suspense } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { LazyExoticComponent } from 'react';
+import HomeView from './views/HomeView';
+import LoadingView from './views/LoadingView';
 
 export type ILazyComponent = (() => JSX.Element) | LazyExoticComponent<any>;
 
@@ -16,9 +16,9 @@ export interface IRouteConfig {
 const routesConfig: IRouteConfig[] = [
   {
     exact: true,
-    path: "/",
-    component: HomeView,
-  },
+    path: '/',
+    component: HomeView
+  }
 ];
 
 const renderRoutes = (routes: IRouteConfig[]): JSX.Element => (
