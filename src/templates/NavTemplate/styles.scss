@@ -1,0 +1,18 @@
+.NavLayout {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &-topBar {
+    border: 1px solid red;
+  }
+
+  &-wrapper{
+    display: flex;
+    
+    flex: 1 1 auto;
+
+  }
+}

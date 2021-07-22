@@ -1,10 +1,12 @@
-import React, { Suspense } from 'react';
+import React, { Fragment, FunctionComponent, lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { LazyExoticComponent } from 'react';
 import HomeView from './views/HomeView';
 import LoadingView from './views/LoadingView';
 
-export type ILazyComponent = (() => JSX.Element) | LazyExoticComponent<any>;
+export type ILazyComponent = (() => JSX.Element) | LazyExoticComponent<FunctionComponent<any>>;
+
+const NavLayout = lazy(() => import('./templates/NavTemplate'));
 
 export interface IRouteConfig {
   exact: boolean;
@@ -17,6 +19,7 @@ const routesConfig: IRouteConfig[] = [
   {
     exact: true,
     path: '/',
+    layout: NavLayout,
     component: HomeView
   }
 ];
@@ -24,8 +27,8 @@ const routesConfig: IRouteConfig[] = [
 const renderRoutes = (routes: IRouteConfig[]): JSX.Element => (
   <Switch>
     {routes.map((route, i) => {
-      // const Layout = route.layout;
-      const Component = route.component;
+      const Layout = route.layout || Fragment;
+      const Component = route.component || Fragment;
 
       return (
         <Route
@@ -34,9 +37,9 @@ const renderRoutes = (routes: IRouteConfig[]): JSX.Element => (
           exact={route.exact}
           render={(props) => (
             <Suspense fallback={<LoadingView />}>
-              {/* <Layout route={route}> */}
-              <Component {...props} />
-              {/* </Layout> */}
+              <Layout>
+                <Component {...props} />
+              </Layout>
             </Suspense>
           )}
         />
