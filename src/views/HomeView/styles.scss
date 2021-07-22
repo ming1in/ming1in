@@ -1,5 +1,20 @@
 .HomeView {
-  height: 100%;
-  width: 100%;
-  border: 1px solid blue;
+  &-hero {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-memoji {
+    height: 128px;
+    width: 128px;
+  }
+
+  &-sectionTwo{
+    height: 300px;
+border: 1px solid blue;
+  }
 }

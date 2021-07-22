@@ -1,18 +1,35 @@
 .NavLayout {
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  position: relative;
 
-  &-topBar {
-    border: 1px solid red;
+  &-wrapper {
+    position: absolute;
+    min-height: 100vh;
+    width: inherit;
   }
 
-  &-wrapper{
-    display: flex;
-    
-    flex: 1 1 auto;
-
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
   }
 }
