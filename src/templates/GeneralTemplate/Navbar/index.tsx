@@ -11,10 +11,10 @@ export default function Navbar(): React.ReactElement {
       </Link>
 
       <div>
-        <Link to="resume" className="Navbar-navItem">
+        <Link to="/resume" className="Navbar-navItem">
           Resume
         </Link>
-        <Link to="about" className="Navbar-navItem">
+        <Link to="/about" className="Navbar-navItem">
           My Story
         </Link>
       </div>

@@ -1,13 +1,10 @@
 import React from 'react';
-import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
 
 function App(): React.ReactElement {
-  const history = createBrowserHistory();
-
   return (
-    <Router history={history}>
+    <Router>
       <Routes />
     </Router>
   );
