@@ -1,12 +1,12 @@
 import React, { Fragment, FunctionComponent, lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { LazyExoticComponent } from 'react';
-import HomeView from './views/HomeView';
 import LoadingView from './views/LoadingView';
 
-export type ILazyComponent = (() => JSX.Element) | LazyExoticComponent<FunctionComponent<any>>;
+export type ILazyComponent = (() => React.ReactElement) | LazyExoticComponent<FunctionComponent<any>>;
 
-const NavTemplate = lazy(() => import('./templates/NavTemplate'));
+const HomeTemplate = lazy(() => import('./templates/HomeTemplate'));
+const GeneralTemplate = lazy(() => import('./templates/GeneralTemplate'));
 
 export interface IRouteConfig {
   exact: boolean;
@@ -19,20 +19,32 @@ const routesConfig: IRouteConfig[] = [
   {
     exact: true,
     path: '/',
-    layout: NavTemplate,
-    component: HomeView
+    layout: HomeTemplate,
+    component: lazy(() => import('./views/HomeView'))
+  },
+  {
+    exact: true,
+    path: '/resume',
+    layout: GeneralTemplate,
+    component: lazy(() => import('./views/ResumeView'))
+  },
+  {
+    exact: true,
+    path: '/about',
+    layout: GeneralTemplate,
+    component: lazy(() => import('./views/AboutView'))
   }
 ];
 
-const renderRoutes = (routes: IRouteConfig[]): JSX.Element => (
+const renderRoutes = (routes: IRouteConfig[]): React.ReactElement => (
   <Switch>
-    {routes.map((route, i) => {
+    {routes.map((route, idx) => {
       const Layout = route.layout || Fragment;
-      const Component = route.component || Fragment;
+      const Component = route.component;
 
       return (
         <Route
-          key={i}
+          key={idx}
           path={route.path}
           exact={route.exact}
           render={(props) => (
@@ -48,8 +60,6 @@ const renderRoutes = (routes: IRouteConfig[]): JSX.Element => (
   </Switch>
 );
 
-function Routes(): JSX.Element {
+export default function Routes(): React.ReactElement {
   return renderRoutes(routesConfig);
 }
-
-export default Routes;
