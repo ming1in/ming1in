@@ -1,21 +1,43 @@
-.NavLayout {
-  min-height: 100vh;
+.NavTemplate {
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
+  align-items: center;
 
   &-wrapper {
-    position: absolute;
-    min-height: 100vh;
+    flex-grow: 1;
     width: inherit;
   }
 
+  &-socialContainer {
+    border-left: 2px solid black;
+    padding-left: 8px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: baseline;
+    padding-bottom: 32px;
+  }
+
+  &-socialIcon {
+    height: 24px;
+  }
+
   .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+  }
+  @media (min-width: 576px) {
+    .container {
+      padding-inline: 5px;
+      margin-inline: 5px;
+    }
   }
   @media (min-width: 768px) {
     .container {

@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Icon from '../../../components/atoms/Icon';
 import { IconTypeEnum } from '../../../types/enums/IconType';
+import { SocialUrl } from '../../../types/enums/Socials';
 
 import './styles.scss';
 
@@ -9,13 +11,21 @@ export default function Navbar(): React.ReactElement {
     <div className="Navbar">
       <div className="Navbar-emailContainer">
         <Icon className="Navbar-emailIcon" iconType={IconTypeEnum.Email} />
-        <span>minglianglin50@gmail.com</span>
+        <a className="Navbar-navItem" href={`mailto: ${SocialUrl.Email}`}>
+          minglianglin50@gmail.com
+        </a>
       </div>
 
-      <div className="Navbar-navItemContainer">
-        <span>Experiences</span>
-        <span>Projects</span>
-        <span>My Story</span>
+      <div>
+        <Link to="" className="Navbar-navItem">
+          Experiences
+        </Link>
+        <Link to="" className="Navbar-navItem">
+          Projects
+        </Link>
+        <Link to="" className="Navbar-navItem">
+          My Story
+        </Link>
       </div>
     </div>
   );

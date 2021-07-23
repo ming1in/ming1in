@@ -6,7 +6,7 @@ import LoadingView from './views/LoadingView';
 
 export type ILazyComponent = (() => JSX.Element) | LazyExoticComponent<FunctionComponent<any>>;
 
-const NavLayout = lazy(() => import('./templates/NavTemplate'));
+const NavTemplate = lazy(() => import('./templates/NavTemplate'));
 
 export interface IRouteConfig {
   exact: boolean;
@@ -19,7 +19,7 @@ const routesConfig: IRouteConfig[] = [
   {
     exact: true,
     path: '/',
-    layout: NavLayout,
+    layout: NavTemplate,
     component: HomeView
   }
 ];
