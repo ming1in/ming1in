@@ -16,6 +16,10 @@ export default function Navbar(): React.ReactElement {
         </a>
       </div>
 
+      <Link to="/" className="Navbar-nameNav">
+        - Ming Lin -
+      </Link>
+
       <div>
         <Link to="/resume" className="Navbar-navItem">
           Resume

@@ -12,6 +12,7 @@ export default function NavTemplate({ children }: PropsWithChildren<unknown>): R
       <div className="container">
         <Navbar />
         <div className="NavTemplate-wrapper">{children}</div>
+
         <div className="NavTemplate-socialContainer">
           <a href={SocialUrl.Github} target="_blank" rel="noreferrer">
             <Icon className="NavTemplate-socialIcon" iconType={IconTypeEnum.Github} />

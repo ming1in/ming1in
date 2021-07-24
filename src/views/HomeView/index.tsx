@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../../components/atoms/Icon';
 import { IconTypeEnum } from '../../types/enums/IconType';
+import { SocialUrl } from '../../types/enums/Socials';
 
 import './styles.scss';
 
@@ -21,7 +22,7 @@ export default function HomeView(): React.ReactElement {
           <h4>a Software Engineer in the New York City Area.</h4>
         </div>
 
-        <button>Connect with me</button>
+        <a href={`mailto: ${SocialUrl.Email}`}>Connect with me</a>
       </div>
     </div>
   );

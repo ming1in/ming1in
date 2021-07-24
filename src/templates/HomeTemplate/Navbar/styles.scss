@@ -17,6 +17,15 @@
     }
   }
 
+  &-nameNav {
+    display: none;
+    margin-inline: 0px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
   &-navItem {
     display: inline-block;
     position: relative;
@@ -46,6 +55,14 @@
 
   @media (max-width: 576px) {
     padding: 24px 0px;
+
+    &-emailContainer {
+      display: none;
+    }
+
+    &-leftNavItem {
+      display: inline-block;
+    }
 
     &-navItem {
       font-size: 16px;
