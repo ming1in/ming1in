@@ -9,6 +9,8 @@ import { TimelineData } from '../../../types/interfaces/views';
 import ExperienceCard from '../ExperienceCard';
 import ProjectCard from '../ProjectCard';
 import EducationCard from '../EducationCard';
+import PresentCard from '../PresentCard';
+import Card from '../../../components/atoms/Card';
 
 interface Props {
   filter?: TimelineType;
@@ -39,11 +41,20 @@ export default function Timeline(props: Props): React.ReactElement {
 
   return (
     <div className="Timeline">
+      <div className="Timeline-section">
+        <PresentCard />
+      </div>
+
       {timeLineData.map((data, idx) => (
         <div className="Timeline-section" key={idx}>
           {renderTimelineCard(data, idx)}
         </div>
       ))}
+      <div className="Timeline-section">
+        <div className="Timeline-circle" />
+
+        <h3>📌 The beginning of it all</h3>
+      </div>
     </div>
   );
 }

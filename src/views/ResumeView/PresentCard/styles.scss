@@ -1,36 +1,4 @@
-.Timeline {
-  border-left: 2px solid black;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  padding: 32px 0px;
-
-  &-section {
-    display: flex;
-    margin-left: -11px;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 32px;
-  }
-
-  @media (max-width: 400px) {
-    &-section {
-      margin-left: -10px;
-    }
-  }
-
-  @media (max-width: 576px) {
-    &-section {
-      margin-left: -9px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    &-section {
-      margin-left: -10px;
-    }
-  }
-
+.PresentCard {
   &-circle {
     height: 16px;
     width: 16px;
