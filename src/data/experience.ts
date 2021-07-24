@@ -11,7 +11,7 @@ export interface Experience extends BaseTimelineData {
 export const ExperienceData: Experience[] = [
   {
     start: moment('May 1 2021'),
-    end: moment('September 2021'),
+    end: moment('September 1 2021'),
     title: 'Software Engineering Intern',
     company: 'Wellsheet',
     body: [
@@ -38,7 +38,7 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('May 1 2020'),
-    end: moment('May 2021'),
+    end: moment('May 1 2021'),
     title: 'Full Stack Software Engineer',
     company: 'Skinblu',
     body: [
@@ -50,14 +50,14 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('Jan 1 2021'),
-    end: moment('Jun 2021'),
+    end: moment('Jun 1 2021'),
     title: 'Software Engineer',
     company: 'Develop For Good',
     tech: [IconTypeEnum.React, IconTypeEnum.Typescript]
   },
   {
     start: moment('Jan 1 2021'),
-    end: moment('Jun 2021'),
+    end: moment('Jun 1 2021'),
     title: 'Software Engineer',
     company: "Akron's Children's Hospital",
     body: [
@@ -74,7 +74,7 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('May 1 2019'),
-    end: moment('Jan 2020'),
+    end: moment('Jan 1 2020'),
     title: 'Quality Engineer Intern',
     company: 'Zimmer Biomet',
     initShowBody: false,
@@ -89,7 +89,7 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('May 1 2019'),
-    end: moment('Jan 2020'),
+    end: moment('Jan 1 2020'),
     title: 'Engineering Graphics Teaching Assistant',
     company: 'Stevens Institute of Technology',
     body: [
@@ -99,7 +99,7 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('May 1 2019'),
-    end: moment('Jan 2020'),
+    end: moment('Jan 1 2020'),
     title: 'Research Assistant',
     company: 'Stevens Institute of Technology',
     body: [
