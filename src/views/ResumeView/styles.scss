@@ -17,6 +17,11 @@
     color: white;
   }
 
+  &-selectedExperienceFilter {
+    background-color: rgb(102, 212, 207);
+    color: white;
+  }
+
   &-projectFilter {
     border: 1px solid rgb(255, 69, 58);
     padding: 0.5em 1em;
@@ -25,6 +30,11 @@
   }
 
   &-projectFilter:hover {
+    background-color: rgb(255, 69, 58);
+    color: white;
+  }
+
+  &-selectedProjectFilter {
     background-color: rgb(255, 69, 58);
     color: white;
   }
@@ -41,6 +51,11 @@
     color: white;
   }
 
+  &-selectedEducationFilter {
+    background-color: rgb(48, 209, 88);
+    color: white;
+  }
+
   &-allFilter {
     border: 1px solid black;
     padding: 0.5em 1em;
@@ -49,6 +64,11 @@
   }
 
   &-allFilter:hover {
+    background-color: black;
+    color: white;
+  }
+
+  &-selectedAllFilter {
     background-color: black;
     color: white;
   }

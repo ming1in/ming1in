@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Timeline from './Timeline';
 import './styles.scss';
 import { TimelineType } from '../../types/enums/Timeline';
+import classNames from 'classnames';
 
 export default function ResumeView(): React.ReactElement {
   const [filter, setFilter] = useState<undefined | TimelineType>(undefined);
@@ -13,16 +14,31 @@ export default function ResumeView(): React.ReactElement {
       <h1>Check out my past work</h1>
 
       <div className="ResumeView-filtersContainer">
-        <span onClick={(e) => onClickFilter(e, TimelineType.Experience)} className="ResumeView-experienceFilter">
+        <span
+          onClick={(e) => onClickFilter(e, TimelineType.Experience)}
+          className={classNames('ResumeView-experienceFilter', {
+            '-selectedExperienceFilter': filter === TimelineType.Experience
+          })}
+        >
           Experiences
         </span>
-        <span onClick={(e) => onClickFilter(e, TimelineType.Project)} className="ResumeView-projectFilter">
+        <span
+          onClick={(e) => onClickFilter(e, TimelineType.Project)}
+          className={classNames('ResumeView-projectFilter', {
+            '-selectedProjectFilter': filter === TimelineType.Project
+          })}
+        >
           Projects
         </span>
-        <span onClick={(e) => onClickFilter(e, TimelineType.Education)} className="ResumeView-educationFilter">
+        <span
+          onClick={(e) => onClickFilter(e, TimelineType.Education)}
+          className={classNames('ResumeView-educationFilter', {
+            '-selectedEducationFilter': filter === TimelineType.Education
+          })}
+        >
           Education
         </span>
-        <span onClick={onClickFilter} className="ResumeView-allFilter">
+        <span onClick={onClickFilter} className={classNames('ResumeView-allFilter', { '-selectedAllFilter': !filter })}>
           All
         </span>
       </div>
