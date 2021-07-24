@@ -25,9 +25,14 @@ export default function ProjectCard(props: Props): JSX.Element {
     <>
       <div className="ProjectCard-circle" />
 
-      <div className="ProjectCard-iconContainer">
-        {data.tech && data.tech.map((icon, idx) => <Icon className="ProjectCard-techIcon" key={idx} iconType={icon} />)}
-      </div>
+      {data.tech && (
+        <div className="ProjectCard-iconContainer">
+          {data.tech.map((icon, idx) => (
+            <Icon className="ProjectCard-techIcon" key={idx} iconType={icon} />
+          ))}
+        </div>
+      )}
+
       <Card className="ProjectCard-card">
         <span className="ProjectCard-date">{date}</span>
 
