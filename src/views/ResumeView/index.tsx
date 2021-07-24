@@ -18,7 +18,7 @@ export default function ResumeView(): React.ReactElement {
 
   return (
     <div className="ResumeView">
-      <h1 className="ResumeView-title">Check out my past work</h1>
+      <h1 className="ResumeView-title">💥 Behold! My life&apos;s work</h1>
 
       <div className="ResumeView-filtersContainer">
         <span

@@ -4,8 +4,6 @@ import Icon from '../../../components/atoms/Icon';
 import { Experience } from '../../../data/experience';
 import { IconTypeEnum } from '../../../types/enums/IconType';
 
-// import doc from '../../../assets/documents/dfg-case-study.pdf'
-
 import './styles.scss';
 interface Props {
   data: Experience;
