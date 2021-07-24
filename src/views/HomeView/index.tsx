@@ -22,7 +22,7 @@ export default function HomeView(): React.ReactElement {
           <h4>a Software Engineer in the New York City Area.</h4>
         </div>
 
-        <a href={`mailto: ${SocialUrl.Email}`}>Connect with me</a>
+        <a href={SocialUrl.LinkedIn}>Connect with me</a>
       </div>
     </div>
   );
