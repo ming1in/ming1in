@@ -38,6 +38,7 @@
     border-radius: 50%;
     border: 2px solid black;
   }
+
   &-card {
     padding: 16px;
     text-align: left;
@@ -48,9 +49,10 @@
     &-card {
       width: 100%;
     }
+
     &-circle {
       height: 14px;
-      width: 16px;
+      width: 14px;
     }
   }
   @media (min-width: 768px) {

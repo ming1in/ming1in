@@ -10,7 +10,6 @@ import ExperienceCard from '../ExperienceCard';
 import ProjectCard from '../ProjectCard';
 import EducationCard from '../EducationCard';
 import PresentCard from '../PresentCard';
-import Card from '../../../components/atoms/Card';
 
 interface Props {
   filter?: TimelineType;
