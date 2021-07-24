@@ -6,6 +6,7 @@ import EmailIcon from '../../assets/icons/email.svg';
 import MemojiIcon from '../../assets/icons/memoji.svg';
 import GithubIcon from '../../assets/icons/github.svg';
 import LinkedInIcon from '../../assets/icons/linkedin.svg';
+import PlusIcon from '../../assets/icons/plus.svg';
 
 export default function Icon(props: IIconProps): JSX.Element {
   const { iconType, ...htmlProps } = props;
@@ -19,5 +20,7 @@ export default function Icon(props: IIconProps): JSX.Element {
       return <img {...htmlProps} src={GithubIcon} alt="GithubIcon" />;
     case IconTypeEnum.LinkedIn:
       return <img {...htmlProps} src={LinkedInIcon} alt="LinkedInIcon" />;
+    case IconTypeEnum.Plus:
+      return <img {...htmlProps} src={PlusIcon} alt="PlusIcon" />;
   }
 }
