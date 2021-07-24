@@ -40,20 +40,25 @@ export default function Timeline(props: Props): React.ReactElement {
 
   return (
     <div className="Timeline">
-      <div className="Timeline-section">
-        <PresentCard />
-      </div>
+      {!filter && (
+        <div className="Timeline-section">
+          <PresentCard />
+        </div>
+      )}
 
       {timeLineData.map((data, idx) => (
         <div className="Timeline-section" key={idx}>
           {renderTimelineCard(data, idx)}
         </div>
       ))}
-      <div className="Timeline-section">
-        <div className="Timeline-circle" />
 
-        <h3>📌 The beginning of it all</h3>
-      </div>
+      {!filter && (
+        <div className="Timeline-section">
+          <div className="Timeline-circle" />
+
+          <h3>📌 The beginning of it all</h3>
+        </div>
+      )}
     </div>
   );
 }
