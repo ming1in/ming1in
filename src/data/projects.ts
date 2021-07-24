@@ -17,7 +17,13 @@ export const ProjectData: Project[] = [
       'Engineered a scalable parsing engine that mapped GEDCOM to data types and provided a foundation for 57 features built by 8 team members.',
       'Developed a unit testing framework and standardized patterns for 180 testing code paths.'
     ],
-    tech: [IconTypeEnum.Python]
+    tech: [IconTypeEnum.Python],
+    links: [
+      {
+        title: 'Github',
+        url: 'https://github.com/ming1in/gedcom-parser'
+      }
+    ]
   },
   {
     title: 'Zillow Zestimate Challenge',
@@ -27,7 +33,13 @@ export const ProjectData: Project[] = [
       'Condensed an initial 53 features to 27 features with feature engineering to improve the efficiency of training models. ',
       'Mapped concepts across 3 large datasets and applied exploratory data analysis techniques to identify hidden relations.'
     ],
-    tech: [IconTypeEnum.Python]
+    tech: [IconTypeEnum.Python],
+    links: [
+      {
+        title: 'Github',
+        url: 'https://github.com/ming1in/Stevens-IT/blob/master/CS_559/projects/03_zillow/project_3.ipynb'
+      }
+    ]
   },
   {
     title: 'Jim Fitness Web App',
@@ -36,7 +48,13 @@ export const ProjectData: Project[] = [
       'Designed end-to-end web application and scalable backend infrastructure using Typescript.',
       'Consolidated tasks into user stories, facilitated context sharing and managed a team of 4 engineers.'
     ],
-    tech: [IconTypeEnum.React, IconTypeEnum.MongoDb, IconTypeEnum.Typescript]
+    tech: [IconTypeEnum.React, IconTypeEnum.MongoDb, IconTypeEnum.Typescript],
+    links: [
+      {
+        title: 'Github',
+        url: 'https://github.com/ming1in/jim-app'
+      }
+    ]
   },
   {
     title: '‘PLaF’ Custom Programming Language',
@@ -44,7 +62,13 @@ export const ProjectData: Project[] = [
     body: [
       'Designed a programming language from scratch to explore and apply foundational concepts such as abstract syntax trees, lexers, parsers, and type-checking for functional, imperative, or object-oriented languages.'
     ],
-    tech: [IconTypeEnum.Ocaml]
+    tech: [IconTypeEnum.Ocaml],
+    links: [
+      {
+        title: 'Github',
+        url: 'https://github.com/ming1in/Stevens-IT/tree/master/CS_496/interpreter'
+      }
+    ]
   },
   {
     title: 'Fulament eCommerce Website',

@@ -28,7 +28,13 @@ export const ExperienceData: Experience[] = [
       'Consulted clients on viable software solutions, business strategy, and design to bring ideas to life.',
       'Spearheaded a collaborative development workflow with a team of 4 cross-functional engineers by implementing Scrum methodologies to consistently execute tasks in a backlog.'
     ],
-    tech: [IconTypeEnum.Javascript, IconTypeEnum.Html, IconTypeEnum.Css]
+    tech: [IconTypeEnum.Javascript, IconTypeEnum.Html, IconTypeEnum.Css],
+    links: [
+      {
+        title: 'Website',
+        url: 'https://www.stachesolutions.com/'
+      }
+    ]
   },
   {
     start: moment('May 2020'),
@@ -58,7 +64,13 @@ export const ExperienceData: Experience[] = [
       'Voted team lead amongst 6 engineers to develop a multi-page web app with React following a strict HIPAA compliant product requirement.',
       'Led and shipped a suite of features - dynamic timeline, genetic medical risk calculator, and interactive glossary.'
     ],
-    tech: [IconTypeEnum.React, IconTypeEnum.Typescript]
+    tech: [IconTypeEnum.React, IconTypeEnum.Typescript],
+    links: [
+      {
+        title: 'Case Study',
+        url: 'https://firebasestorage.googleapis.com/v0/b/storage-8999c.appspot.com/o/personal-website%2Fdfg-case-study.pdf?alt=media&token=dad22dd2-b79b-4c79-83ab-56fbbc1a4283'
+      }
+    ]
   },
   {
     start: moment('May 2019'),

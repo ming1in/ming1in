@@ -38,13 +38,28 @@ export default function ProjectCard(props: Props): JSX.Element {
           {data.body && <Icon className="ProjectCard-plusIcon" onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />}
         </div>
 
-        {data.body &&
-          isOpen &&
-          data.body.map((text, idx) => (
-            <p className="ProjectCard-bodyText" key={idx}>
-              - {text}
-            </p>
-          ))}
+        {isOpen && (
+          <>
+            {data.body &&
+              data.body.map((text, idx) => (
+                <p className="ProjectCard-bodyText" key={idx}>
+                  - {text}
+                </p>
+              ))}
+
+            {data.links && (
+              <div className="ProjectCard-linkContainer">
+                <Icon iconType={IconTypeEnum.Link} className="ProjectCard-linkIcon" />
+
+                {data.links.map((link, idx) => (
+                  <a target="_blank" rel="noreferrer" key={idx} href={link.url}>
+                    {link.title}
+                  </a>
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </Card>
     </>
   );

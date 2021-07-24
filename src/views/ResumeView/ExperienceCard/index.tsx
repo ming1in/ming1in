@@ -4,6 +4,8 @@ import Icon from '../../../components/atoms/Icon';
 import { Experience } from '../../../data/experience';
 import { IconTypeEnum } from '../../../types/enums/IconType';
 
+// import doc from '../../../assets/documents/dfg-case-study.pdf'
+
 import './styles.scss';
 interface Props {
   data: Experience;
@@ -42,13 +44,28 @@ export default function ExperienceCard(props: Props): JSX.Element {
           )}
         </div>
 
-        {data.body &&
-          isOpen &&
-          data.body.map((text, idx) => (
-            <p className="ExperienceCard-bodyText" key={idx}>
-              - {text}
-            </p>
-          ))}
+        {isOpen && (
+          <>
+            {data.body &&
+              data.body.map((text, idx) => (
+                <p className="ExperienceCard-bodyText" key={idx}>
+                  - {text}
+                </p>
+              ))}
+
+            {data.links && (
+              <div className="ExperienceCard-linkContainer">
+                <Icon iconType={IconTypeEnum.Link} className="ExperienceCard-linkIcon" />
+
+                {data.links.map((link, idx) => (
+                  <a target="_blank" rel="noreferrer" key={idx} href={link.url}>
+                    {link.title}
+                  </a>
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </Card>
     </>
   );

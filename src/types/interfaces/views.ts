@@ -7,7 +7,7 @@ import { TimelineType } from '../enums/Timeline';
 
 interface ResumeLinks {
   title: string;
-  link: string;
+  url: string;
 }
 
 export interface BaseTimelineData {

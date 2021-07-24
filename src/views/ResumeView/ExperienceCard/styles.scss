@@ -63,4 +63,19 @@
   &-plusIcon {
     cursor: pointer;
   }
+
+    &-linkContainer {
+    display: flex;
+    gap: 4px;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &-linkIcon {
+    width: 16px;
+    height: 16px;
+  }
 }

@@ -19,6 +19,7 @@ import HtmlIcon from '../../assets/icons/html.svg';
 import CssIcon from '../../assets/icons/css.svg';
 import PostgresqlIcon from '../../assets/icons/postgresql.svg';
 import OcamlIcon from '../../assets/icons/ocaml.svg';
+import LinkIcon from '../../assets/icons/link.svg';
 
 export default function Icon(props: IIconProps): JSX.Element {
   const { iconType, ...htmlProps } = props;
@@ -58,5 +59,7 @@ export default function Icon(props: IIconProps): JSX.Element {
       return <img {...htmlProps} src={PostgresqlIcon} alt="PostgresqlIcon" />;
     case IconTypeEnum.Ocaml:
       return <img {...htmlProps} src={OcamlIcon} alt="OcamlIcon" />;
+    case IconTypeEnum.Link:
+      return <img {...htmlProps} src={LinkIcon} alt="LinkIcon" />;
   }
 }
