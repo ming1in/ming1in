@@ -10,7 +10,7 @@ export interface Experience extends BaseTimelineData {
 
 export const ExperienceData: Experience[] = [
   {
-    start: moment('May 2021'),
+    start: moment('May 1 2021'),
     end: moment('September 2021'),
     title: 'Software Engineering Intern',
     company: 'Wellsheet',
@@ -21,7 +21,7 @@ export const ExperienceData: Experience[] = [
     tech: [IconTypeEnum.Typescript, IconTypeEnum.React, IconTypeEnum.Ruby, IconTypeEnum.Rails, IconTypeEnum.Postgresql]
   },
   {
-    start: moment('Dec 2019'),
+    start: moment('Dec 1 2019'),
     company: 'Stache Solutions',
     title: 'Founder & Software Engineer',
     body: [
@@ -37,7 +37,7 @@ export const ExperienceData: Experience[] = [
     ]
   },
   {
-    start: moment('May 2020'),
+    start: moment('May 1 2020'),
     end: moment('May 2021'),
     title: 'Full Stack Software Engineer',
     company: 'Skinblu',
@@ -49,14 +49,14 @@ export const ExperienceData: Experience[] = [
     tech: [IconTypeEnum.React, IconTypeEnum.Javascript, IconTypeEnum.Firebase]
   },
   {
-    start: moment('Jan 2021'),
+    start: moment('Jan 1 2021'),
     end: moment('Jun 2021'),
     title: 'Software Engineer',
     company: 'Develop For Good',
     tech: [IconTypeEnum.React, IconTypeEnum.Typescript]
   },
   {
-    start: moment('Jan 2021'),
+    start: moment('Jan 1 2021'),
     end: moment('Jun 2021'),
     title: 'Software Engineer',
     company: "Akron's Children's Hospital",
@@ -73,7 +73,7 @@ export const ExperienceData: Experience[] = [
     ]
   },
   {
-    start: moment('May 2019'),
+    start: moment('May 1 2019'),
     end: moment('Jan 2020'),
     title: 'Quality Engineer Intern',
     company: 'Zimmer Biomet',
@@ -88,7 +88,7 @@ export const ExperienceData: Experience[] = [
     ]
   },
   {
-    start: moment('May 2019'),
+    start: moment('May 1 2019'),
     end: moment('Jan 2020'),
     title: 'Engineering Graphics Teaching Assistant',
     company: 'Stevens Institute of Technology',
@@ -98,7 +98,7 @@ export const ExperienceData: Experience[] = [
     ]
   },
   {
-    start: moment('May 2019'),
+    start: moment('May 1 2019'),
     end: moment('Jan 2020'),
     title: 'Research Assistant',
     company: 'Stevens Institute of Technology',
