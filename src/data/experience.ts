@@ -1,4 +1,5 @@
 import moment from 'moment';
+import { IconTypeEnum } from '../types/enums/IconType';
 import { TimelineType } from '../types/enums/Timeline';
 import { BaseTimelineData } from '../types/interfaces/views';
 
@@ -16,7 +17,8 @@ export const ExperienceData: Experience[] = [
     body: [
       'Contributed and reviewed React-Rails code for frontend, backend, and infrastructure components.',
       'Refactored the slowest segments of the app with optimizations that improved network calls by 50% using batch queries and frontend pagination.'
-    ]
+    ],
+    tech: [IconTypeEnum.Typescript, IconTypeEnum.React, IconTypeEnum.Ruby, IconTypeEnum.Rails, IconTypeEnum.Postgresql]
   },
   {
     start: moment('Dec 2019'),
@@ -25,7 +27,8 @@ export const ExperienceData: Experience[] = [
     body: [
       'Consulted clients on viable software solutions, business strategy, and design to bring ideas to life.',
       'Spearheaded a collaborative development workflow with a team of 4 cross-functional engineers by implementing Scrum methodologies to consistently execute tasks in a backlog.'
-    ]
+    ],
+    tech: [IconTypeEnum.Javascript, IconTypeEnum.Html, IconTypeEnum.Css]
   },
   {
     start: moment('May 2020'),
@@ -36,13 +39,15 @@ export const ExperienceData: Experience[] = [
       'Integrated Firebase cloud functions to provide tailored data to support the frontend and automate backend tasks.',
       'Created backend testing framework using Jest and locally emulated Firestore database.',
       'Built multi-step continuous appointment booking, messaging, payment, and push notification features with Node.js/React.'
-    ]
+    ],
+    tech: [IconTypeEnum.React, IconTypeEnum.Javascript, IconTypeEnum.Firebase]
   },
   {
     start: moment('Jan 2021'),
     end: moment('Jun 2021'),
     title: 'Software Engineer',
-    company: 'Develop For Good'
+    company: 'Develop For Good',
+    tech: [IconTypeEnum.React, IconTypeEnum.Typescript]
   },
   {
     start: moment('Jan 2021'),
@@ -52,7 +57,8 @@ export const ExperienceData: Experience[] = [
     body: [
       'Voted team lead amongst 6 engineers to develop a multi-page web app with React following a strict HIPAA compliant product requirement.',
       'Led and shipped a suite of features - dynamic timeline, genetic medical risk calculator, and interactive glossary.'
-    ]
+    ],
+    tech: [IconTypeEnum.React, IconTypeEnum.Typescript]
   },
   {
     start: moment('May 2019'),

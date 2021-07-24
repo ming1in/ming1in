@@ -1,4 +1,8 @@
 .ResumeView {
+  &-title{
+    text-align: start;
+  }
+
   &-filtersContainer {
     display: flex;
     gap: 16px;

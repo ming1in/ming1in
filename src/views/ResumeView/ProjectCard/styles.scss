@@ -7,6 +7,17 @@
     border: 2px solid black;
   }
 
+  &-iconContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &-techIcon {
+    height: 24px;
+    width: 24px;
+  }
+
   &-card {
     padding: 16px;
     text-align: left;

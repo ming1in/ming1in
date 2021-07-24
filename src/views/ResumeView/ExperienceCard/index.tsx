@@ -24,6 +24,11 @@ export default function ExperienceCard(props: Props): JSX.Element {
     <>
       <div className="ExperienceCard-circle" />
 
+      <div className="ExperienceCard-iconContainer">
+        {data.tech &&
+          data.tech.map((icon, idx) => <Icon className="ExperienceCard-techIcon" key={idx} iconType={icon} />)}
+      </div>
+
       <Card className="ExperienceCard-card">
         <span className="ExperienceCard-date">{date}</span>
 

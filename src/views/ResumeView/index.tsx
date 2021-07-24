@@ -3,42 +3,52 @@ import Timeline from './Timeline';
 import './styles.scss';
 import { TimelineType } from '../../types/enums/Timeline';
 import classNames from 'classnames';
+import { ExperienceData } from '../../data/experience';
+import { ProjectData } from '../../data/projects';
+import { EducationData } from '../../data/education';
 
 export default function ResumeView(): React.ReactElement {
   const [filter, setFilter] = useState<undefined | TimelineType>(undefined);
 
   const onClickFilter = (e: React.MouseEvent, selectedFilter?: TimelineType) => setFilter(selectedFilter);
 
+  const experienceCount = ExperienceData.length,
+    projectCount = ProjectData.length,
+    educationCount = EducationData.length;
+
   return (
     <div className="ResumeView">
-      <h1>Check out my past work</h1>
+      <h1 className="ResumeView-title">Check out my past work</h1>
 
       <div className="ResumeView-filtersContainer">
         <span
           onClick={(e) => onClickFilter(e, TimelineType.Experience)}
           className={classNames('ResumeView-experienceFilter', {
-            '-selectedExperienceFilter': filter === TimelineType.Experience
+            'ResumeView-selectedExperienceFilter': filter === TimelineType.Experience
           })}
         >
-          Experiences
+          {`Experiences (${experienceCount})`}
         </span>
         <span
           onClick={(e) => onClickFilter(e, TimelineType.Project)}
           className={classNames('ResumeView-projectFilter', {
-            '-selectedProjectFilter': filter === TimelineType.Project
+            'ResumeView-selectedProjectFilter': filter === TimelineType.Project
           })}
         >
-          Projects
+          {`Projects (${projectCount})`}
         </span>
         <span
           onClick={(e) => onClickFilter(e, TimelineType.Education)}
           className={classNames('ResumeView-educationFilter', {
-            '-selectedEducationFilter': filter === TimelineType.Education
+            'ResumeView-selectedEducationFilter': filter === TimelineType.Education
           })}
         >
-          Education
+          {`Education (${educationCount})`}
         </span>
-        <span onClick={onClickFilter} className={classNames('ResumeView-allFilter', { '-selectedAllFilter': !filter })}>
+        <span
+          onClick={onClickFilter}
+          className={classNames('ResumeView-allFilter', { 'ResumeView-selectedAllFilter': !filter })}
+        >
           All
         </span>
       </div>
