@@ -1,5 +1,5 @@
 .Timeline {
-  margin-left: 16px;
+  
   border-left: 2px solid black;
   display: flex;
   position: relative;
@@ -13,5 +13,22 @@
     align-items: center;
     margin-bottom: 32px;
   }
-  
+
+  @media (max-width: 400px) {
+    &-section {
+      margin-left: -10px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &-section {
+      margin-left: -9px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-section {
+      margin-left: -10px;
+    }
+  }
 }

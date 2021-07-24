@@ -5,6 +5,11 @@ import { Project } from '../../data/projects';
 import { IconTypeEnum } from '../enums/IconType';
 import { TimelineType } from '../enums/Timeline';
 
+interface ResumeLinks {
+  title: string;
+  link: string;
+}
+
 export interface BaseTimelineData {
   type: TimelineType;
   initShowBody?: boolean;
@@ -12,6 +17,7 @@ export interface BaseTimelineData {
   start: Moment;
   end?: Moment;
   tech?: Array<IconTypeEnum>;
+  links?: Array<ResumeLinks>;
 }
 
 export type TimelineData = Experience | Project | Education;
