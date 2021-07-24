@@ -1,0 +1,55 @@
+.ResumeView {
+  &-filtersContainer {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &-experienceFilter {
+    border: 1px solid rgb(102, 212, 207);
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+
+  &-experienceFilter:hover {
+    background-color: rgb(102, 212, 207);
+    color: white;
+  }
+
+  &-projectFilter {
+    border: 1px solid rgb(255, 69, 58);
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+
+  &-projectFilter:hover {
+    background-color: rgb(255, 69, 58);
+    color: white;
+  }
+
+  &-educationFilter {
+    border: 1px solid rgb(48, 209, 88);
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+
+  &-educationFilter:hover {
+    background-color: rgb(48, 209, 88);
+    color: white;
+  }
+
+  &-allFilter {
+    border: 1px solid black;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    cursor: pointer;
+  }
+
+  &-allFilter:hover {
+    background-color: black;
+    color: white;
+  }
+}

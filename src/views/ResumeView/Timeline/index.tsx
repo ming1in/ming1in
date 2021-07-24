@@ -1,53 +1,48 @@
-import React, { useState } from 'react';
-import { TimelineData } from '../../../data/timeline';
-import Icon from '../../../components/atoms/Icon';
-import { IconTypeEnum } from '../../../types/enums/IconType';
+import React from 'react';
+import { ExperienceData, Experience } from '../../../data/experience';
 
 import './styles.scss';
+import { Project, ProjectData } from '../../../data/projects';
+import { Education, EducationData } from '../../../data/education';
+import { TimelineType } from '../../../types/enums/Timeline';
+import { TimelineData } from '../../../types/interfaces/views';
+import ExperienceCard from '../ExperienceCard';
+import ProjectCard from '../ProjectCard';
+import EducationCard from '../EducationCard';
 
-interface TimelineCardProps {
-  key: number;
-  data: TimelineData;
+interface Props {
+  filter?: TimelineType;
 }
 
-function TimelineCard(props: TimelineCardProps): JSX.Element {
-  const { key, data } = props;
-  const [isOpen, setIsOpen] = useState(data.initShowBody ?? true);
+export default function Timeline(props: Props): React.ReactElement {
+  const { filter } = props;
 
-  const toggleIsOpen = () => setIsOpen(!isOpen);
+  const timeLineData = [...ExperienceData, ...ProjectData, ...EducationData]
+    .filter((data) => {
+      if (!filter) return data;
+      else if (data.type === filter) return data;
+    })
+    .sort((a, b) => b.start.valueOf() - a.start.valueOf());
 
-  return (
-    <div key={key} className="Timeline-section">
-      <div className="Timeline-circle" />
+  const renderTimelineCard = (data: TimelineData, idx: number) => {
+    switch (data.type) {
+      case TimelineType.Experience:
+        return <ExperienceCard key={idx} data={data as Experience} />;
+      case TimelineType.Project:
+        return <ProjectCard key={idx} data={data as Project} />;
+      case TimelineType.Education:
+        return <EducationCard key={idx} data={data as Education} />;
+      default:
+        return null;
+    }
+  };
 
-      <div className="Timeline-card">
-        <span className="Timeline-date">{data.start}</span>
-
-        <div className="Timeline-header">
-          <div>
-            <h3 className="Timeline-title">{data.title}</h3>
-            <p className="Timeline-company">{data.company}</p>
-          </div>
-          {data.body && <Icon className="Timeline-plusIcon" onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />}
-        </div>
-
-        {data.body &&
-          isOpen &&
-          data.body.map((text, idx) => (
-            <p className="Timeline-bodyText" key={idx}>
-              - {text}
-            </p>
-          ))}
-      </div>
-    </div>
-  );
-}
-
-export default function Timeline(): React.ReactElement {
   return (
     <div className="Timeline">
-      {TimelineData.map((data, idx) => (
-        <TimelineCard key={idx} data={data} />
+      {timeLineData.map((data, idx) => (
+        <div className="Timeline-section" key={idx}>
+          {renderTimelineCard(data, idx)}
+        </div>
       ))}
     </div>
   );

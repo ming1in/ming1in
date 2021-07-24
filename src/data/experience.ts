@@ -1,16 +1,16 @@
-export interface TimelineData {
-  start: string;
-  end: string;
+import moment from 'moment';
+import { TimelineType } from '../types/enums/Timeline';
+import { BaseTimelineData } from '../types/interfaces/views';
+
+export interface Experience extends BaseTimelineData {
   title: string;
   company: string;
-  initShowBody?: boolean;
-  body?: Array<string>;
 }
 
-export const TimelineData: TimelineData[] = [
+export const ExperienceData: Experience[] = [
   {
-    start: 'May 2021',
-    end: 'September 2021',
+    start: moment('May 2021'),
+    end: moment('September 2021'),
     title: 'Software Engineering Intern',
     company: 'Wellsheet',
     body: [
@@ -19,8 +19,17 @@ export const TimelineData: TimelineData[] = [
     ]
   },
   {
-    start: 'May 2020',
-    end: 'May 2021',
+    start: moment('Dec 2019'),
+    company: 'Stache Solutions',
+    title: 'Founder & Software Engineer',
+    body: [
+      'Consulted clients on viable software solutions, business strategy, and design to bring ideas to life.',
+      'Spearheaded a collaborative development workflow with a team of 4 cross-functional engineers by implementing Scrum methodologies to consistently execute tasks in a backlog.'
+    ]
+  },
+  {
+    start: moment('May 2020'),
+    end: moment('May 2021'),
     title: 'Full Stack Software Engineer',
     company: 'Skinblu',
     body: [
@@ -30,14 +39,14 @@ export const TimelineData: TimelineData[] = [
     ]
   },
   {
-    start: 'Jan 2021',
-    end: 'Jun 2021',
+    start: moment('Jan 2021'),
+    end: moment('Jun 2021'),
     title: 'Software Engineer',
     company: 'Develop For Good'
   },
   {
-    start: 'Jan 2021',
-    end: 'Jun 2021',
+    start: moment('Jan 2021'),
+    end: moment('Jun 2021'),
     title: 'Software Engineer',
     company: "Akron's Children's Hospital",
     body: [
@@ -46,8 +55,8 @@ export const TimelineData: TimelineData[] = [
     ]
   },
   {
-    start: 'May 2019',
-    end: 'Jan 2020',
+    start: moment('May 2019'),
+    end: moment('Jan 2020'),
     title: 'Quality Engineer Intern',
     company: 'Zimmer Biomet',
     initShowBody: false,
@@ -61,8 +70,8 @@ export const TimelineData: TimelineData[] = [
     ]
   },
   {
-    start: 'May 2019',
-    end: 'Jan 2020',
+    start: moment('May 2019'),
+    end: moment('Jan 2020'),
     title: 'Engineering Graphics Teaching Assistant',
     company: 'Stevens Institute of Technology',
     body: [
@@ -71,8 +80,8 @@ export const TimelineData: TimelineData[] = [
     ]
   },
   {
-    start: 'May 2019',
-    end: 'Jan 2020',
+    start: moment('May 2019'),
+    end: moment('Jan 2020'),
     title: 'Research Assistant',
     company: 'Stevens Institute of Technology',
     body: [
@@ -80,4 +89,4 @@ export const TimelineData: TimelineData[] = [
       'Utilized MATLAB toolboxes such as image processing and computer vision to process data and calibrate the camera and project to detect real-world dimensions.'
     ]
   }
-];
+].map((experience) => ({ ...experience, type: TimelineType.Experience }));
