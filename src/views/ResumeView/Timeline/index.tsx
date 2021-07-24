@@ -28,7 +28,7 @@ function TimelineCard(props: TimelineCardProps): JSX.Element {
             <h3 className="Timeline-title">{data.title}</h3>
             <p className="Timeline-company">{data.company}</p>
           </div>
-          <Icon onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />
+          {data.body && <Icon className="Timeline-plusIcon" onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />}
         </div>
 
         {data.body &&
