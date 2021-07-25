@@ -6,11 +6,18 @@ import classNames from 'classnames';
 import { ExperienceData } from '../../data/experience';
 import { ProjectData } from '../../data/projects';
 import { EducationData } from '../../data/education';
+import useMixpanel from '../../hooks/useMixpanel';
+import { MixpanelEvent } from '../../types/enums/MixPanel';
 
 export default function ResumeView(): React.ReactElement {
+  const mixPanel = useMixpanel();
+
   const [filter, setFilter] = useState<undefined | TimelineType>(undefined);
 
-  const onClickFilter = (e: React.MouseEvent, selectedFilter?: TimelineType) => setFilter(selectedFilter);
+  const onClickFilter = (e: React.MouseEvent, selectedFilter?: TimelineType) => {
+    setFilter(selectedFilter);
+    mixPanel.track({ event: MixpanelEvent.OnClickFilter, props: { filter: selectedFilter ?? 'all' } });
+  };
 
   const experienceCount = ExperienceData.length,
     projectCount = ProjectData.length,
