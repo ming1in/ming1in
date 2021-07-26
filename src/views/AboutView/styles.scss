@@ -1,0 +1,63 @@
+.AboutView {
+  &-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-avatar {
+    padding: 8px;
+
+    img {
+      height: 128px;
+      width: 128px;
+    }
+  }
+
+  &-headerText {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin: auto;
+    }
+
+    span {
+      color: lightgrey;
+      margin: 12px 0px;
+    }
+
+    div {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+  }
+
+  &-body {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &-primaryBody {
+    width: calc(50% - 8px);
+  }
+
+  &-secondaryBody {
+    width: calc(50% - 8px);
+  }
+
+  @media (max-width: 768px) {
+    &-body {
+      flex-direction: column;
+    }
+
+    &-primaryBody {
+      width: 100%;
+    }
+
+    &-secondaryBody {
+      width: 100%;
+    }
+  }
+}

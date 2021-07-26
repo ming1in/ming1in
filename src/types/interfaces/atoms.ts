@@ -1,4 +1,5 @@
 import React from 'react';
+import { EButtonVariants } from '../enums/atoms';
 import { IconTypeEnum } from '../enums/IconType';
 
 export interface IImageProps
@@ -10,4 +11,10 @@ export interface IImageProps
 export interface IIconProps extends IImageProps {
   iconType: IconTypeEnum;
   tooltip?: string;
+}
+
+export interface IButtonProps
+  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+  variant?: 'outlined' | 'filled' | EButtonVariants;
+  size?: 'small' | 'medium' | 'large' | EButtonVariants;
 }

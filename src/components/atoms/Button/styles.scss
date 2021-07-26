@@ -1,0 +1,26 @@
+.Button {
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &--filled {
+    background-color: black;
+    color: white;
+  }
+
+  &--outlined {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+  }
+
+  &--small {
+    padding: 0.5em 1em;
+    border-radius: 1em;
+  }
+
+  &--medium {
+    padding: 1em 2em;
+    border-radius: 2em;
+  }
+}
