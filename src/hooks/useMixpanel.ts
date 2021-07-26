@@ -16,6 +16,8 @@ interface MixpanelEventProps {
   };
 }
 
+console.log(isProdEnv);
+
 export default function useMixpanel(): { track(event: MixpanelEventProps): void } {
   return {
     track: ({ event, props }: MixpanelEventProps) => isProdEnv && mixpanel.track(event, props)
