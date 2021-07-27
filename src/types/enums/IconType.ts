@@ -1,6 +1,7 @@
 export enum IconTypeEnum {
   Email = 'email',
   Plus = 'plus',
+  Minus = 'minus',
   Memoji = 'memoji',
   Github = 'github',
   LinkedIn = 'linkedin',

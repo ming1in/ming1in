@@ -12,7 +12,6 @@ interface ResumeLinks {
 
 export interface BaseTimelineData {
   type: TimelineType;
-  initShowBody?: boolean;
   body?: Array<string>;
   start: Moment;
   end?: Moment;

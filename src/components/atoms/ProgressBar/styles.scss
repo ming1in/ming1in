@@ -1,0 +1,15 @@
+.ProgressBar {
+  background-color: lightgray;
+  height: 1em;
+  border-radius: 1em;
+
+  &-bar {
+    height: inherit;
+    background-color: black;
+    border-radius: 1em;
+  }
+
+  &--red {
+    background-color: red;
+  }
+}

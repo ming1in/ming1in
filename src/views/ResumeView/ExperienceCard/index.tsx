@@ -11,7 +11,7 @@ interface Props {
 
 export default function ExperienceCard(props: Props): JSX.Element {
   const { data } = props;
-  const [isOpen, setIsOpen] = useState(data.initShowBody ?? true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleIsOpen = () => setIsOpen(!isOpen);
 
@@ -41,7 +41,11 @@ export default function ExperienceCard(props: Props): JSX.Element {
             <p className="ExperienceCard-company">{data.company}</p>
           </div>
           {data.body && (
-            <Icon className="ExperienceCard-plusIcon" onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />
+            <Icon
+              className="ExperienceCard-plusIcon"
+              onClick={toggleIsOpen}
+              iconType={isOpen ? IconTypeEnum.Minus : IconTypeEnum.Plus}
+            />
           )}
         </div>
 

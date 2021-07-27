@@ -7,6 +7,7 @@ import MemojiIcon from '../../assets/icons/memoji.svg';
 import GithubIcon from '../../assets/icons/github.svg';
 import LinkedInIcon from '../../assets/icons/linkedin.svg';
 import PlusIcon from '../../assets/icons/plus.svg';
+import MinusIcon from '../../assets/icons/minus.svg';
 import ReactIcon from '../../assets/icons/react.svg';
 import FirebaseIcon from '../../assets/icons/firebase.svg';
 import JavascriptIcon from '../../assets/icons/javascript.svg';
@@ -35,6 +36,8 @@ export default function Icon(props: IIconProps): JSX.Element {
       return <img {...htmlProps} src={LinkedInIcon} alt="LinkedInIcon" />;
     case IconTypeEnum.Plus:
       return <img {...htmlProps} src={PlusIcon} alt="PlusIcon" />;
+    case IconTypeEnum.Minus:
+      return <img {...htmlProps} src={MinusIcon} alt="MinusIcon" />;
     case IconTypeEnum.React:
       return <img {...htmlProps} src={ReactIcon} alt="ReactIcon" />;
     case IconTypeEnum.Firebase:

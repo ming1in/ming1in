@@ -12,7 +12,7 @@ interface Props {
 
 export default function ProjectCard(props: Props): JSX.Element {
   const { data } = props;
-  const [isOpen, setIsOpen] = useState(data.initShowBody ?? true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleIsOpen = () => setIsOpen(!isOpen);
 
@@ -40,7 +40,13 @@ export default function ProjectCard(props: Props): JSX.Element {
           <div>
             <h3 className="ProjectCard-title">{data.title}</h3>
           </div>
-          {data.body && <Icon className="ProjectCard-plusIcon" onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />}
+          {data.body && (
+            <Icon
+              className="ExperienceCard-plusIcon"
+              onClick={toggleIsOpen}
+              iconType={isOpen ? IconTypeEnum.Minus : IconTypeEnum.Plus}
+            />
+          )}
         </div>
 
         {isOpen && (

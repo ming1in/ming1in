@@ -12,7 +12,7 @@ interface Props {
 
 export default function EducationCard(props: Props): JSX.Element {
   const { data } = props;
-  const [isOpen, setIsOpen] = useState(data.initShowBody ?? true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleIsOpen = () => setIsOpen(!isOpen);
 
@@ -33,7 +33,13 @@ export default function EducationCard(props: Props): JSX.Element {
             <h3 className="EducationCard-title">{data.organization}</h3>
             <p className="EducationCard-company">{data.degree}</p>
           </div>
-          {data.body && <Icon className="EducationCard-plusIcon" onClick={toggleIsOpen} iconType={IconTypeEnum.Plus} />}
+          {data.body && (
+            <Icon
+              className="ExperienceCard-plusIcon"
+              onClick={toggleIsOpen}
+              iconType={isOpen ? IconTypeEnum.Minus : IconTypeEnum.Plus}
+            />
+          )}
         </div>
 
         {data.body &&

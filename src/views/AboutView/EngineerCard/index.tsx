@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import Button from '../../../components/atoms/Button';
 import Card from '../../../components/atoms/Card';
+import ProgressBar from '../../../components/atoms/ProgressBar';
 import { EButtonSize, EButtonVariants } from '../../../types/enums/atoms';
 
 import './styles.scss';
@@ -56,7 +57,8 @@ export default function EngineerCard(props: Props): JSX.Element {
       {isProgrammingFilter && (
         <div>
           <h3>Languages</h3>
-          <p>Javascript ○ MongoDB</p>
+          <p>Javascript </p>
+          <ProgressBar value={50} />
 
           <h3>Frameworks</h3>
           <p>React ○ Rails</p>
