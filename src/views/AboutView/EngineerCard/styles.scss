@@ -1,8 +1,52 @@
 .EngineerCard {
-  padding: 32px;
+  padding: 36px;
+  text-align: start;
 
   &-filterContainer {
     display: flex;
     gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  &-heatmap {
+    display: grid;
+    grid-template-columns: calc(20% - 3.2px) calc(20% - 3.2px) calc(20% - 3.2px) calc(20% - 3.2px) calc(20% - 3.2px);
+    grid-gap: 4px;
+  }
+
+  &-cell {
+    aspect-ratio: 1;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    span {
+      color: white;
+    }
+
+    img {
+      margin-bottom: 4px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &-legend {
+    display: flex;
+    gap: 4px;
+    height: 8px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    div {
+      flex-grow: 1;
+    }
+    
+  }
+
+  &-legendLabel {
+    color: lightslategray;
   }
 }

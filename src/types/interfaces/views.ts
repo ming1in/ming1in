@@ -19,4 +19,10 @@ export interface BaseTimelineData {
   links?: Array<ResumeLinks>;
 }
 
+export interface IHeatMapData {
+  name: string;
+  value: number;
+  icon?: IconTypeEnum;
+}
+
 export type TimelineData = Experience | Project | Education;

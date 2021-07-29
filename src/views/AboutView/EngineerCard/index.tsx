@@ -2,21 +2,22 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import Button from '../../../components/atoms/Button';
 import Card from '../../../components/atoms/Card';
+import Icon from '../../../components/atoms/Icon';
+import { ProgrammingData } from '../../../data/programming';
+import { SkillsData } from '../../../data/skills';
+import { ToolsData } from '../../../data/tools';
 import { EButtonSize, EButtonVariants } from '../../../types/enums/atoms';
-import Programming from './Programming';
-import Skills from './Skills';
+import { Filter } from '../../../types/enums/views';
+import { IHeatMapData } from '../../../types/interfaces/views';
 
 import './styles.scss';
-import Tools from './Tools';
 
 interface Props {
   className: string;
 }
 
-enum Filter {
-  Programming = 'Programming',
-  Skills = 'Skills',
-  Tools = 'Tools'
+function heatMapColorforValue(value: number) {
+  return `rgba(28, 28, 30, ${1 - (100 - value) / (100 - 0)})`;
 }
 
 export default function EngineerCard(props: Props): JSX.Element {
@@ -29,6 +30,14 @@ export default function EngineerCard(props: Props): JSX.Element {
   const isProgrammingFilter = filter === Filter.Programming,
     isSkillsFilter = filter === Filter.Skills,
     isToolsFilter = filter === Filter.Tools;
+
+  const HeatmapData: IHeatMapData[] = [...ProgrammingData, ...ToolsData, ...SkillsData].filter(
+    (data) => data.category === filter
+  );
+
+  const legend = new Array(10).fill(0).map((_, idx) => (idx + 1) * 10);
+
+  console.log(legend);
 
   return (
     <Card className={classNames(props.className, 'EngineerCard')}>
@@ -56,11 +65,22 @@ export default function EngineerCard(props: Props): JSX.Element {
         </Button>
       </div>
 
-      {isProgrammingFilter && <Programming />}
+      <span className="EngineerCard-legendLabel">From a scale of 😰 to 😎</span>
 
-      {isSkillsFilter && <Skills />}
+      <div className="EngineerCard-legend">
+        {legend.map((value, idx) => (
+          <div key={idx} style={{ background: `${heatMapColorforValue(value)}` }} />
+        ))}
+      </div>
 
-      {isToolsFilter && <Tools />}
+      <div className="EngineerCard-heatmap">
+        {HeatmapData.map((data, idx) => (
+          <div className="EngineerCard-cell" key={idx} style={{ background: `${heatMapColorforValue(data.value)}` }}>
+            {data.icon && <Icon iconType={data.icon} />}
+            <span>{data.name}</span>
+          </div>
+        ))}
+      </div>
     </Card>
   );
 }

@@ -67,7 +67,7 @@ export default function AboutView(): JSX.Element {
             <p>{Lorem}</p>
           </Card>
           <Card className="AboutView-secondaryBody">
-            <p>software engineer</p>
+            <p>human</p>
           </Card>
         </div>
       )}
