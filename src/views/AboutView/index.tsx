@@ -57,10 +57,7 @@ export default function AboutView(): JSX.Element {
           <Card className="AboutView-primaryBody">
             <p>{Lorem}</p>
           </Card>
-
-          <Card className="AboutView-secondaryBody">
-            <p>software engineer</p>
-          </Card>
+          <EngineerCard className="AboutView-secondaryBody" />
         </div>
       )}
 
@@ -69,8 +66,9 @@ export default function AboutView(): JSX.Element {
           <Card className="AboutView-primaryBody">
             <p>{Lorem}</p>
           </Card>
-
-          <EngineerCard className="AboutView-secondaryBody" />
+          <Card className="AboutView-secondaryBody">
+            <p>software engineer</p>
+          </Card>
         </div>
       )}
     </div>

@@ -1,6 +1,6 @@
 .ProgressBar {
   background-color: lightgray;
-  height: 1em;
+  height: 0.75em;
   border-radius: 1em;
 
   &-bar {
@@ -10,6 +10,14 @@
   }
 
   &--red {
-    background-color: red;
+    background-color: rgb(255, 69, 58);
+  }
+
+  &--green {
+    background-color: rgb(48, 209, 88);
+  }
+
+  &--mint {
+    background-color: rgb(102, 212, 207);
   }
 }

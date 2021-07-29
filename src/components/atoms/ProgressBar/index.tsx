@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function ProgressBar(props: Props): JSX.Element {
-  const color = props.color ? `--${props.color}` : '';
+  const color = props.color ? `ProgressBar--${props.color}` : '';
 
   return (
     <div className="ProgressBar">

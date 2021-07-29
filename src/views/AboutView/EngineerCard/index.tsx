@@ -2,10 +2,12 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import Button from '../../../components/atoms/Button';
 import Card from '../../../components/atoms/Card';
-import ProgressBar from '../../../components/atoms/ProgressBar';
 import { EButtonSize, EButtonVariants } from '../../../types/enums/atoms';
+import Programming from './Programming';
+import Skills from './Skills';
 
 import './styles.scss';
+import Tools from './Tools';
 
 interface Props {
   className: string;
@@ -26,7 +28,7 @@ export default function EngineerCard(props: Props): JSX.Element {
 
   const isProgrammingFilter = filter === Filter.Programming,
     isSkillsFilter = filter === Filter.Skills,
-    isToolFilter = filter === Filter.Tools;
+    isToolsFilter = filter === Filter.Tools;
 
   return (
     <Card className={classNames(props.className, 'EngineerCard')}>
@@ -47,38 +49,18 @@ export default function EngineerCard(props: Props): JSX.Element {
         </Button>
         <Button
           onClick={() => onClickFilter(Filter.Tools)}
-          variant={isToolFilter ? EButtonVariants.Filled : EButtonVariants.Outlined}
+          variant={isToolsFilter ? EButtonVariants.Filled : EButtonVariants.Outlined}
           size={EButtonSize.Small}
         >
           Tools
         </Button>
       </div>
 
-      {isProgrammingFilter && (
-        <div>
-          <h3>Languages</h3>
-          <p>Javascript </p>
-          <ProgressBar value={50} />
+      {isProgrammingFilter && <Programming />}
 
-          <h3>Frameworks</h3>
-          <p>React ○ Rails</p>
-          <h3>Database</h3>
-          <p>Firebase ○ MongoDB</p>
-        </div>
-      )}
+      {isSkillsFilter && <Skills />}
 
-      {isSkillsFilter && (
-        <div>
-          <h3>Skills</h3>
-        </div>
-      )}
-
-      {isToolFilter && (
-        <>
-          <h3>Tools</h3>
-          <p>Git ○ ○ GCP ○ Figma ○ Jest ○ Linux ○ MacOS ○ Jupyter ○ Heroku</p>
-        </>
-      )}
+      {isToolsFilter && <Tools />}
     </Card>
   );
 }
