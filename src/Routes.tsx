@@ -13,8 +13,35 @@ export interface IRouteConfig {
   exact: boolean;
   path: string;
   layout?: ILazyComponent;
-  component: ILazyComponent;
+  component: ILazyComponent | (() => null);
 }
+
+const externalRoutes: IRouteConfig[] = [
+  {
+    exact: true,
+    path: '/git/gedcom',
+    component: () => {
+      window.location.href = 'https://github.com/ming1in/gedcom-parser';
+      return null;
+    }
+  },
+  {
+    exact: true,
+    path: '/git/zillow',
+    component: () => {
+      window.location.href = 'https://github.com/ming1in/Stevens-IT/tree/master/CS_559/projects/03_zillow';
+      return null;
+    }
+  },
+  {
+    exact: true,
+    path: '/git/jim',
+    component: () => {
+      window.location.href = 'https://github.com/ming1in/jim-app';
+      return null;
+    }
+  }
+];
 
 const routesConfig: IRouteConfig[] = [
   {
@@ -34,7 +61,8 @@ const routesConfig: IRouteConfig[] = [
     path: ERoute.About,
     layout: GeneralTemplate,
     component: lazy(() => import('./views/AboutView'))
-  }
+  },
+  ...externalRoutes
 ];
 
 const renderRoutes = (routes: IRouteConfig[]): React.ReactElement => (
