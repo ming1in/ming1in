@@ -10,8 +10,8 @@ export const ProgrammingData = [
   { name: 'SQL', value: 90, icon: IconTypeEnum.Postgresql },
   { name: 'Rails', value: 90, icon: IconTypeEnum.Rails },
   { name: 'Ruby', value: 65, icon: IconTypeEnum.Ruby },
-  { name: 'C/C++', value: 40, icon: IconTypeEnum.Javascript },
-  { name: 'Java', value: 40, icon: IconTypeEnum.Javascript },
+  { name: 'C/C++', value: 40, icon: IconTypeEnum.Cpp },
+  { name: 'Java', value: 40, icon: IconTypeEnum.Java },
   { name: 'Ocaml', value: 40, icon: IconTypeEnum.Ocaml },
   { name: 'React', value: 95, icon: IconTypeEnum.React }
 ].map((language) => ({ ...language, category: Filter.Programming }));

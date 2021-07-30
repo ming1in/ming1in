@@ -17,5 +17,7 @@ export enum IconTypeEnum {
   Css = 'css',
   Postgresql = 'postgresql',
   Ocaml = 'ocaml',
-  Link = 'link'
+  Link = 'link',
+  Cpp = 'cpp',
+  Java = 'java'
 }

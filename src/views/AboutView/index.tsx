@@ -5,7 +5,7 @@ import Icon from '../../components/atoms/Icon';
 import { EButtonVariants } from '../../types/enums/atoms';
 import { IconTypeEnum } from '../../types/enums/IconType';
 import EngineerCard from './EngineerCard';
-
+import ProfilePicImg from '../../assets/images/profile-pic.png';
 import './styles.scss';
 
 const Lorem =
@@ -30,7 +30,7 @@ export default function AboutView(): JSX.Element {
     <div className="AboutView">
       <div className="AboutView-header">
         <div className="AboutView-avatar">
-          <Icon iconType={IconTypeEnum.Memoji} />
+          <img src={ProfilePicImg} alt="ProfilePicImg" />
         </div>
         <div className="AboutView-headerText">
           <h1>Who is Ming Lin</h1>
@@ -55,7 +55,28 @@ export default function AboutView(): JSX.Element {
       {isEngineerFilter && (
         <div className="AboutView-body">
           <Card className="AboutView-primaryBody">
-            <p>{Lorem}</p>
+            <p>
+              As an engineer, I’ve explored multiple disciplines such as mechanical, biomedical, and software
+              engineering. Through each of the disciplines, I have always loved the act of engineering more than touting
+              technical skills.
+            </p>
+            <p>I find happiness in building beautiful products that bring people tears of joy.</p>{' '}
+            <p>
+              I find peace in co-working with groups of people who ramble on about their craft, fuelled solely by
+              passion.
+            </p>
+            <p>
+              I find comfort in designing large scalable systems where every aspect fits together harmoniously such that
+              processes flow flawlessly.
+            </p>
+            <p>
+              Today, I have settled on software as my ultimate engineering tool. I was drawn in by the brilliant modern
+              community creating crazy tools, apps, and models. I believe that software can deliver and captivate
+              people’s imaginations of the future.
+            </p>
+            <p>
+              Given that, my moral compass leads me to be <strong>first and foremost an engineer</strong> than a coder.
+            </p>
           </Card>
           <EngineerCard className="AboutView-secondaryBody" />
         </div>
