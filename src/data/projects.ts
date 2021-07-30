@@ -26,6 +26,22 @@ export const ProjectData: Project[] = [
     ]
   },
   {
+    title: 'Slack Channel/Github PR App',
+    start: moment('July 30,2021'),
+    tech: [IconTypeEnum.Typescript],
+    body: [
+      'Deployed a Slack app that creates and archives in a channel based on open/closed Github pull requests.',
+      'Created custom Slack commands and custom actions reacting to PR actions using webhooks served on a Express server.',
+      'Designed cross-application features to increase communication, productivity, and reduce churn.'
+    ],
+    links: [
+      {
+        title: 'Github',
+        url: 'https://github.com/WellSheet/live-github'
+      }
+    ]
+  },
+  {
     title: 'Zillow Zestimate Challenge',
     start: moment('April 1 2021'),
     body: [
