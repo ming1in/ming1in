@@ -8,12 +8,6 @@
     margin-bottom: 16px;
   }
 
-  &-heatmap {
-    display: grid;
-    grid-template-columns: calc(20% - 3.2px) calc(20% - 3.2px) calc(20% - 3.2px) calc(20% - 3.2px) calc(20% - 3.2px);
-    grid-gap: 4px;
-  }
-
   &-cell {
     aspect-ratio: 1;
     padding: 4px;
@@ -43,7 +37,6 @@
     div {
       flex-grow: 1;
     }
-    
   }
 
   &-legendLabel {

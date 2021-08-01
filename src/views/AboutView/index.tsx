@@ -17,7 +17,7 @@ enum EAboutFilter {
 }
 
 export default function AboutView(): JSX.Element {
-  const [filter, setFilter] = useState(EAboutFilter.Human);
+  const [filter, setFilter] = useState(EAboutFilter.Engineer);
 
   const onClickFilter = (selectedTitle: EAboutFilter) => {
     setFilter(selectedTitle);
