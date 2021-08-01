@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from 'react';
+import Button from '../../components/atoms/Button';
 import Icon from '../../components/atoms/Icon';
 import { IconTypeEnum } from '../../types/enums/IconType';
 import { SocialUrl } from '../../types/enums/Socials';
@@ -8,16 +9,16 @@ import './styles.scss';
 
 export default function NavTemplate({ children }: PropsWithChildren<unknown>): JSX.Element {
   return (
-    <div className="NavTemplate">
+    <div className="GenerallTemplate">
       <div className="container">
         <Navbar />
-        <div className="NavTemplate-wrapper">{children}</div>
-        <div className="NavTemplate-socialContainer">
+        <div className="GenerallTemplate-wrapper">{children}</div>
+        <div className="GenerallTemplate-socialContainer">
           <a href={SocialUrl.Github} target="_blank" rel="noreferrer">
-            <Icon className="NavTemplate-socialIcon" iconType={IconTypeEnum.Github} />
+            <Icon className="GenerallTemplate-socialIcon" iconType={IconTypeEnum.Github} />
           </a>
           <a href={SocialUrl.LinkedIn} target="_blank" rel="noreferrer">
-            <Icon className="NavTemplate-socialIcon" iconType={IconTypeEnum.LinkedIn} />
+            <Icon className="GenerallTemplate-socialIcon" iconType={IconTypeEnum.LinkedIn} />
           </a>
         </div>
       </div>

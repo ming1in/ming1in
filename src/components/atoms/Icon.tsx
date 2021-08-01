@@ -23,6 +23,7 @@ import OcamlIcon from '../../assets/icons/ocaml.svg';
 import LinkIcon from '../../assets/icons/link.svg';
 import CppIcon from '../../assets/icons/cpp.svg';
 import JavaIcon from '../../assets/icons/java.svg';
+import PrinterIcon from '../../assets/icons/printer.svg';
 
 export default function Icon(props: IIconProps): JSX.Element {
   const { iconType, ...htmlProps } = props;
@@ -70,5 +71,7 @@ export default function Icon(props: IIconProps): JSX.Element {
       return <img {...htmlProps} src={CppIcon} alt="CppIcon" />;
     case IconTypeEnum.Java:
       return <img {...htmlProps} src={JavaIcon} alt="JavaIcon" />;
+    case IconTypeEnum.Printer:
+      return <img {...htmlProps} src={PrinterIcon} alt="PrinterIcon" />;
   }
 }

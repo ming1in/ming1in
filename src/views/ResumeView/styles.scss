@@ -1,5 +1,5 @@
 .ResumeView {
-  &-title{
+  &-title {
     text-align: start;
   }
 
@@ -76,5 +76,20 @@
   &-selectedAllFilter {
     background-color: black;
     color: white;
+  }
+
+  &-printButton {
+    position: fixed;
+    bottom: 16px;
+    right: 0;
+    margin-right: 10vw;
+
+    h3 {
+      margin: auto;
+    }
+  }
+
+  &-printIcon {
+    color: #ffff;
   }
 }

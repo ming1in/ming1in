@@ -19,5 +19,6 @@ export enum IconTypeEnum {
   Ocaml = 'ocaml',
   Link = 'link',
   Cpp = 'cpp',
-  Java = 'java'
+  Java = 'java',
+  Printer = 'printer'
 }

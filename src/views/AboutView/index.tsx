@@ -23,8 +23,6 @@ export default function AboutView(): JSX.Element {
   const isHumanFilter = filter === EAboutFilter.Human,
     isEngineerFilter = filter === EAboutFilter.Engineer;
 
-  console.log(Hobbies);
-
   return (
     <div className="AboutView">
       <div className="AboutView-header">

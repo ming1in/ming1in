@@ -8,6 +8,9 @@ import { ProjectData } from '../../data/projects';
 import { EducationData } from '../../data/education';
 import useMixpanel from '../../hooks/useMixpanel';
 import { MixpanelEvent } from '../../types/enums/MixPanel';
+import Button from '../../components/atoms/Button';
+import Icon from '../../components/atoms/Icon';
+import { IconTypeEnum } from '../../types/enums/IconType';
 
 export default function ResumeView(): React.ReactElement {
   const mixPanel = useMixpanel();
@@ -60,6 +63,12 @@ export default function ResumeView(): React.ReactElement {
         </span>
       </div>
       <Timeline filter={filter} />
+
+      <div className="ResumeView-printButton">
+        <Button icon={IconTypeEnum.Printer}>
+          <h3>Print</h3>
+        </Button>
+      </div>
     </div>
   );
 }
