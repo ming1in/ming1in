@@ -56,6 +56,22 @@
 
   &-secondaryBody {
     width: calc(50% - 8px);
+    padding: 36px;
+    text-align: start;
+  }
+
+  &-hobbyContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    span {
+      margin-bottom: 4px;
+    }
+  }
+
+  &-hobbyTitle {
+    color: lightgray
   }
 
   @media (max-width: 992px) {

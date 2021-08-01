@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../../components/atoms/Button';
 import Card from '../../components/atoms/Card';
-import Icon from '../../components/atoms/Icon';
 import { EButtonVariants } from '../../types/enums/atoms';
-import { IconTypeEnum } from '../../types/enums/IconType';
 import EngineerCard from './EngineerCard';
 import ProfilePicImg from '../../assets/images/profile-pic.png';
 import './styles.scss';
-
-const Lorem =
-  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?';
+import { Hobbies } from '../../data/hobby';
+import ProgressBar from '../../components/atoms/ProgressBar';
 
 enum EAboutFilter {
   Human = 'human',
@@ -17,7 +14,7 @@ enum EAboutFilter {
 }
 
 export default function AboutView(): JSX.Element {
-  const [filter, setFilter] = useState(EAboutFilter.Engineer);
+  const [filter, setFilter] = useState(EAboutFilter.Human);
 
   const onClickFilter = (selectedTitle: EAboutFilter) => {
     setFilter(selectedTitle);
@@ -25,6 +22,8 @@ export default function AboutView(): JSX.Element {
 
   const isHumanFilter = filter === EAboutFilter.Human,
     isEngineerFilter = filter === EAboutFilter.Engineer;
+
+  console.log(Hobbies);
 
   return (
     <div className="AboutView">
@@ -85,10 +84,42 @@ export default function AboutView(): JSX.Element {
       {isHumanFilter && (
         <div className="AboutView-body">
           <Card className="AboutView-primaryBody">
-            <p>{Lorem}</p>
+            <p>
+              Hey, what up visitor! First of all, I’m flattered you would like to learn more about me. Depending on the
+              time of the day I am either coding away on a project, working on my endless list of hobbies or going on a
+              spontaneous adventure with my friends.
+            </p>
+            <p>
+              Some of my hobbies include making specialty coffees, tending to my plants, and biking. Coffee is currently
+              the king of all my hobbies as I find it therapeutic to tinker with parameters to formulate the perfect cup
+              of coffee. I do not mean to gloat but I make a mean cup of pour-over with Tetsu Kasuya’s 4:6 technique. I
+              am still perfecting my latte art, but mark my words one day I’ll pour a tulip.
+            </p>
+            <p>
+              After I have my morning coffee I tend to my plants which I think are such versatile organisms. I find the
+              entire field of botany so fascinating and my champion is a Pilea peperomioides or more commonly known as
+              the Chinese money plant.
+            </p>
+            <p>
+              The reason I love these hobbies is that it’s refreshing to learn about how much depth there is in fields
+              that differ so much from my work as a software engineer. I love falling into deep rabbit holes and solving
+              unique problems. Now I am not only Ming the engineer, but I consider myself Ming the coffee barista,
+              gardener, and jack of all trades.
+            </p>
+            <p>
+              There are so many other topics I love that would make this a 6 page essay. But I love talking about them
+              all, feel free to connect with me and I would love to chat more. Thanks for visiting!
+            </p>
           </Card>
+
           <Card className="AboutView-secondaryBody">
-            <p>human</p>
+            <h3 className="AboutView-hobbyTitle">Hobby</h3>
+            {Hobbies.map((hobby) => (
+              <div key={hobby.name} className="AboutView-hobbyContainer">
+                <span>{hobby.name}</span>
+                <ProgressBar value={hobby.progress} color="mint" />
+              </div>
+            ))}
           </Card>
         </div>
       )}
