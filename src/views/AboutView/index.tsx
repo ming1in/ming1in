@@ -88,10 +88,10 @@ export default function AboutView(): JSX.Element {
               spontaneous adventure with my friends.
             </p>
             <p>
-              Some of my hobbies include making specialty coffees, tending to my plants, and biking. Coffee is currently
-              the king of all my hobbies as I find it therapeutic to tinker with parameters to formulate the perfect cup
-              of coffee. I do not mean to gloat but I make a mean cup of pour-over with Tetsu Kasuya’s 4:6 technique. I
-              am still perfecting my latte art, but mark my words one day I’ll pour a tulip.
+              Some of my hobbies include making specialty coffees, tending to my plants, and cheffing it up. Coffee is
+              currently the king of all my hobbies as I find it therapeutic to tinker with parameters to formulate the
+              perfect cup of coffee. I do not mean to gloat but I make a mean cup of pour-over with Tetsu Kasuya’s 4:6
+              technique. I am still perfecting my latte art, but mark my words one day I’ll pour a tulip.
             </p>
             <p>
               After I have my morning coffee I tend to my plants which I think are such versatile organisms. I find the
