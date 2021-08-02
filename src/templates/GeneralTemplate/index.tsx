@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from 'react';
-import Button from '../../components/atoms/Button';
 import Icon from '../../components/atoms/Icon';
 import { IconTypeEnum } from '../../types/enums/IconType';
 import { SocialUrl } from '../../types/enums/Socials';
