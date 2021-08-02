@@ -25,6 +25,10 @@ export default function ResumeView(): React.ReactElement {
     projectCount = ProjectData.length,
     educationCount = EducationData.length;
 
+  const onClickPrint = () =>
+    (window.location.href =
+      'https://firebasestorage.googleapis.com/v0/b/storage-8999c.appspot.com/o/personal-website%2FResume%20v5.pdf?alt=media&token=892648c9-36c8-48d5-bd39-22ad32c873e5');
+
   return (
     <div className="ResumeView">
       <h1 className="ResumeView-title">💥 Behold! My life&apos;s work</h1>
@@ -64,8 +68,8 @@ export default function ResumeView(): React.ReactElement {
       <Timeline filter={filter} />
 
       <div className="ResumeView-printButton">
-        <Button icon={IconTypeEnum.Printer}>
-          <h3>Print</h3>
+        <Button onClick={onClickPrint} icon={IconTypeEnum.Printer}>
+          Print
         </Button>
       </div>
     </div>
