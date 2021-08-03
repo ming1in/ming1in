@@ -40,6 +40,14 @@ const externalRoutes: IRouteConfig[] = [
       window.location.href = 'https://github.com/ming1in/jim-app';
       return null;
     }
+  },
+  {
+    exact: true,
+    path: '/git/live-github',
+    component: () => {
+      window.location.href = 'https://github.com/WellSheet/live-github';
+      return null;
+    }
   }
 ];
 

@@ -30,9 +30,8 @@ export const ProjectData: Project[] = [
     start: moment('July 30,2021'),
     tech: [IconTypeEnum.Typescript],
     body: [
-      'Deployed a Slack app that creates and archives in a channel based on open/closed Github pull requests.',
-      'Created custom Slack commands and custom actions reacting to PR actions using webhooks served on a Express server.',
-      'Designed cross-application features to increase communication, productivity, and reduce churn.'
+      'Deployed a Slack/Github bot that creates/archives a Slack channel based on open/closed Github PRs using webhooks.',
+      'Designed cross-application features and custom automated actions to increase communication, productivity, and reduce churn.'
     ],
     links: [
       {
