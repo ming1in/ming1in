@@ -2,7 +2,7 @@ import React, { Fragment, FunctionComponent, lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { LazyExoticComponent } from 'react';
 import LoadingView from './views/LoadingView';
-import { ERoute } from './types/enums/Routes';
+import { EExternalRoute, EGithubRepoLink, EInternalRoute } from './types/enums/Routes';
 
 export type ILazyComponent = (() => React.ReactElement) | LazyExoticComponent<FunctionComponent<any>>;
 
@@ -11,7 +11,7 @@ const GeneralTemplate = lazy(() => import('./templates/GeneralTemplate'));
 
 export interface IRouteConfig {
   exact: boolean;
-  path: string;
+  path: EExternalRoute | EInternalRoute;
   layout?: ILazyComponent;
   component: ILazyComponent | (() => null);
 }
@@ -19,33 +19,33 @@ export interface IRouteConfig {
 const externalRoutes: IRouteConfig[] = [
   {
     exact: true,
-    path: '/git/gedcom',
+    path: EExternalRoute.Gedcom,
     component: () => {
-      window.location.href = 'https://github.com/ming1in/gedcom-parser';
+      window.location.href = EGithubRepoLink.Gedcom;
       return null;
     }
   },
   {
     exact: true,
-    path: '/git/zillow',
+    path: EExternalRoute.Zillow,
     component: () => {
-      window.location.href = 'https://github.com/ming1in/Stevens-IT/tree/master/CS_559/projects/03_zillow';
+      window.location.href = EGithubRepoLink.Zillow;
       return null;
     }
   },
   {
     exact: true,
-    path: '/git/jim',
+    path: EExternalRoute.JimApp,
     component: () => {
-      window.location.href = 'https://github.com/ming1in/jim-app';
+      window.location.href = EGithubRepoLink.JimApp;
       return null;
     }
   },
   {
     exact: true,
-    path: '/git/live-github',
+    path: EExternalRoute.LiveGithub,
     component: () => {
-      window.location.href = 'https://github.com/WellSheet/live-github';
+      window.location.href = EGithubRepoLink.LiveGithub;
       return null;
     }
   }
@@ -54,19 +54,19 @@ const externalRoutes: IRouteConfig[] = [
 const routesConfig: IRouteConfig[] = [
   {
     exact: true,
-    path: ERoute.Home,
+    path: EInternalRoute.Home,
     layout: HomeTemplate,
     component: lazy(() => import('./views/HomeView'))
   },
   {
     exact: true,
-    path: ERoute.Resume,
+    path: EInternalRoute.Resume,
     layout: GeneralTemplate,
     component: lazy(() => import('./views/ResumeView'))
   },
   {
     exact: true,
-    path: ERoute.About,
+    path: EInternalRoute.About,
     layout: GeneralTemplate,
     component: lazy(() => import('./views/AboutView'))
   },

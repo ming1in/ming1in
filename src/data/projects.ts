@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { Moment } from 'moment';
 import { IconTypeEnum } from '../types/enums/IconType';
+import { EGithubRepoLink } from '../types/enums/Routes';
 import { TimelineType } from '../types/enums/Timeline';
 import { BaseTimelineData } from '../types/interfaces/views';
 
@@ -21,7 +22,7 @@ export const ProjectData: Project[] = [
     links: [
       {
         title: 'Github',
-        url: 'https://github.com/ming1in/gedcom-parser'
+        url: EGithubRepoLink.Gedcom
       }
     ]
   },
@@ -36,7 +37,7 @@ export const ProjectData: Project[] = [
     links: [
       {
         title: 'Github',
-        url: 'https://github.com/WellSheet/live-github'
+        url: EGithubRepoLink.LiveGithub
       }
     ]
   },
@@ -52,7 +53,7 @@ export const ProjectData: Project[] = [
     links: [
       {
         title: 'Github',
-        url: 'https://github.com/ming1in/Stevens-IT/blob/master/CS_559/projects/03_zillow/project_3.ipynb'
+        url: EGithubRepoLink.Zillow
       }
     ]
   },
@@ -67,7 +68,7 @@ export const ProjectData: Project[] = [
     links: [
       {
         title: 'Github',
-        url: 'https://github.com/ming1in/jim-app'
+        url: EGithubRepoLink.JimApp
       }
     ]
   },
@@ -81,7 +82,7 @@ export const ProjectData: Project[] = [
     links: [
       {
         title: 'Github',
-        url: 'https://github.com/ming1in/Stevens-IT/tree/master/CS_496/interpreter'
+        url: EGithubRepoLink.Plaf
       }
     ]
   },

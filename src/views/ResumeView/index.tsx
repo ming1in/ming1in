@@ -10,6 +10,7 @@ import useMixpanel from '../../hooks/useMixpanel';
 import { MixpanelEvent } from '../../types/enums/MixPanel';
 import Button from '../../components/atoms/Button';
 import { IconTypeEnum } from '../../types/enums/IconType';
+import { ELink } from '../../types/enums/views';
 
 export default function ResumeView(): React.ReactElement {
   const mixPanel = useMixpanel();
@@ -25,9 +26,7 @@ export default function ResumeView(): React.ReactElement {
     projectCount = ProjectData.length,
     educationCount = EducationData.length;
 
-  const onClickPrint = () =>
-    (window.location.href =
-      'https://firebasestorage.googleapis.com/v0/b/storage-8999c.appspot.com/o/personal-website%2FResume%20v5.pdf?alt=media&token=892648c9-36c8-48d5-bd39-22ad32c873e5');
+  const onClickPrint = () => (window.location.href = ELink.Resume);
 
   return (
     <div className="ResumeView">
