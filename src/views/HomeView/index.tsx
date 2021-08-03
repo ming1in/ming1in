@@ -13,12 +13,14 @@ export default function HomeView(): React.ReactElement {
 
         <div className="HomeView-textContainer">
           <h2>Hi, I’m Ming 🤘🏼</h2>
+
           <h1>
             I build experiences, <br />
             curate products, and bring ideas to life
             <br />
             with code
           </h1>
+
           <h4>a Software Engineer in the New York City Area.</h4>
         </div>
 

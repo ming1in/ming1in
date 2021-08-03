@@ -24,6 +24,13 @@ import LinkIcon from '../../assets/icons/link.svg';
 import CppIcon from '../../assets/icons/cpp.svg';
 import JavaIcon from '../../assets/icons/java.svg';
 import PrinterIcon from '../../assets/icons/printer.svg';
+import AppleIcon from '../../assets/icons/apple.svg';
+import FigmaIcon from '../../assets/icons/figma.svg';
+import HerokuIcon from '../../assets/icons/heroku.svg';
+import JupyterIcon from '../../assets/icons/jupyter.svg';
+import LinuxIcon from '../../assets/icons/linux.svg';
+import GoogleCloud from '../../assets/icons/google-cloud.svg';
+import Jest from '../../assets/icons/jest.svg';
 
 export default function Icon(props: IIconProps): JSX.Element {
   const { iconType, ...htmlProps } = props;
@@ -73,5 +80,19 @@ export default function Icon(props: IIconProps): JSX.Element {
       return <img {...htmlProps} src={JavaIcon} alt="JavaIcon" />;
     case IconTypeEnum.Printer:
       return <img {...htmlProps} src={PrinterIcon} alt="PrinterIcon" />;
+    case IconTypeEnum.Apple:
+      return <img {...htmlProps} src={AppleIcon} alt="AppleIcon" />;
+    case IconTypeEnum.Figma:
+      return <img {...htmlProps} src={FigmaIcon} alt="FigmaIcon" />;
+    case IconTypeEnum.Heroku:
+      return <img {...htmlProps} src={HerokuIcon} alt="HerokuIcon" />;
+    case IconTypeEnum.Jupyter:
+      return <img {...htmlProps} src={JupyterIcon} alt="JupyterIcon" />;
+    case IconTypeEnum.Linux:
+      return <img {...htmlProps} src={LinuxIcon} alt="LinuxIcon" />;
+    case IconTypeEnum.GoogleCloud:
+      return <img {...htmlProps} src={GoogleCloud} alt="GoogleCloud" />;
+    case IconTypeEnum.Jest:
+      return <img {...htmlProps} src={Jest} alt="Jest" />;
   }
 }

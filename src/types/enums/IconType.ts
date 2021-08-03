@@ -20,5 +20,12 @@ export enum IconTypeEnum {
   Link = 'link',
   Cpp = 'cpp',
   Java = 'java',
-  Printer = 'printer'
+  Printer = 'printer',
+  Apple = 'apple',
+  Figma = 'figma',
+  Heroku = 'heroku',
+  Jupyter = 'jupyter',
+  Linux = 'linux',
+  GoogleCloud = 'googlecloud',
+  Jest = 'jest'
 }
