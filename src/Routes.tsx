@@ -82,7 +82,7 @@ const renderRoutes = (routes: IRouteConfig[]): React.ReactElement => (
       return (
         <Route
           key={idx}
-          path={route.path}
+          path={route.path as string}
           exact={route.exact}
           render={(props) => (
             <Suspense fallback={<LoadingView />}>

@@ -4,7 +4,7 @@ import Icon from '../../../components/atoms/Icon';
 import useMixpanel from '../../../hooks/useMixpanel';
 import { IconTypeEnum } from '../../../types/enums/IconType';
 import { MixpanelEvent } from '../../../types/enums/MixPanel';
-import { ERoute } from '../../../types/enums/Routes';
+import { EInternalRoute } from '../../../types/enums/Routes';
 import { SocialUrl } from '../../../types/enums/Socials';
 
 import './styles.scss';
@@ -25,15 +25,15 @@ export default function Navbar(): React.ReactElement {
         </a>
       </div>
 
-      <Link onClick={() => onClickLink(ERoute.Home)} to={ERoute.Home} className="Navbar-nameNav">
+      <Link onClick={() => onClickLink(EInternalRoute.Home)} to={EInternalRoute.Home} className="Navbar-nameNav">
         - Ming Lin -
       </Link>
 
       <div>
-        <Link onClick={() => onClickLink(ERoute.Resume)} to={ERoute.Resume} className="Navbar-navItem">
+        <Link onClick={() => onClickLink(EInternalRoute.Resume)} to={EInternalRoute.Resume} className="Navbar-navItem">
           Resume
         </Link>
-        <Link onClick={() => onClickLink(ERoute.About)} to={ERoute.About} className="Navbar-navItem">
+        <Link onClick={() => onClickLink(EInternalRoute.About)} to={EInternalRoute.About} className="Navbar-navItem">
           My Story
         </Link>
       </div>
