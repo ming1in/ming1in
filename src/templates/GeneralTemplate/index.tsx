@@ -19,6 +19,9 @@ export default function NavTemplate({ children }: PropsWithChildren<unknown>): J
           <a href={SocialUrl.LinkedIn} target="_blank" rel="noreferrer">
             <Icon className="GenerallTemplate-socialIcon" iconType={IconTypeEnum.LinkedIn} />
           </a>
+          <a href={SocialUrl.Instagram} target="_blank" rel="noreferrer">
+            <Icon className="GenerallTemplate-socialIcon" iconType={IconTypeEnum.Instagram} />
+          </a>
         </div>
       </div>
     </div>

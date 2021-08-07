@@ -27,5 +27,6 @@ export enum IconTypeEnum {
   Jupyter = 'jupyter',
   Linux = 'linux',
   GoogleCloud = 'googlecloud',
-  Jest = 'jest'
+  Jest = 'jest',
+  Instagram = 'instagram'
 }

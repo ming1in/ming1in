@@ -20,6 +20,9 @@ export default function NavTemplate({ children }: PropsWithChildren<unknown>): R
           <a href={SocialUrl.LinkedIn} target="_blank" rel="noreferrer">
             <Icon className="NavTemplate-socialIcon" iconType={IconTypeEnum.LinkedIn} />
           </a>
+          <a href={SocialUrl.Instagram} target="_blank" rel="noreferrer">
+            <Icon className="NavTemplate-socialIcon" iconType={IconTypeEnum.Instagram} />
+          </a>
         </div>
       </div>
     </div>

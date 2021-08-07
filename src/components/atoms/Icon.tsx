@@ -31,6 +31,7 @@ import JupyterIcon from '../../assets/icons/jupyter.svg';
 import LinuxIcon from '../../assets/icons/linux.svg';
 import GoogleCloud from '../../assets/icons/google-cloud.svg';
 import Jest from '../../assets/icons/jest.svg';
+import Instagram from '../../assets/icons/instagram.svg';
 
 export default function Icon(props: IIconProps): JSX.Element {
   const { iconType, ...htmlProps } = props;
@@ -94,5 +95,7 @@ export default function Icon(props: IIconProps): JSX.Element {
       return <img {...htmlProps} src={GoogleCloud} alt="GoogleCloud" />;
     case IconTypeEnum.Jest:
       return <img {...htmlProps} src={Jest} alt="Jest" />;
+    case IconTypeEnum.Instagram:
+      return <img {...htmlProps} src={Instagram} alt="Instagram" />;
   }
 }
