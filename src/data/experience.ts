@@ -11,7 +11,7 @@ export interface Experience extends BaseTimelineData {
 export const ExperienceData: Experience[] = [
   {
     start: moment('May 1 2021'),
-    end: moment('September 1 2021'),
+    end: moment('August 1 2021'),
     title: 'Software Engineering Intern',
     company: 'Wellsheet',
     body: [
@@ -88,8 +88,8 @@ export const ExperienceData: Experience[] = [
     ]
   },
   {
-    start: moment('May 1 2019'),
-    end: moment('Jan 1 2020'),
+    start: moment('August 1 2019'),
+    end: moment('December 1 2019'),
     title: 'Engineering Graphics Teaching Assistant',
     company: 'Stevens Institute of Technology',
     body: [
@@ -98,8 +98,8 @@ export const ExperienceData: Experience[] = [
     ]
   },
   {
-    start: moment('May 1 2019'),
-    end: moment('Jan 1 2020'),
+    start: moment('Jan 1 2019'),
+    end: moment('May 1 2020'),
     title: 'Research Assistant',
     company: 'Stevens Institute of Technology',
     body: [
