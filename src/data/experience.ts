@@ -31,7 +31,7 @@ export const ExperienceData: Experience[] = [
     tech: [IconTypeEnum.Javascript, IconTypeEnum.Html, IconTypeEnum.Css],
     links: [
       {
-        title: 'Website',
+        title: 'Skinblu',
         url: 'https://www.stachesolutions.com/'
       }
     ]
