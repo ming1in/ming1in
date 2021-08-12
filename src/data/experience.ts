@@ -99,7 +99,7 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('Jan 1 2019'),
-    end: moment('May 1 2020'),
+    end: moment('May 1 2019'),
     title: 'Research Assistant',
     company: 'Stevens Institute of Technology',
     body: [
