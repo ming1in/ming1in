@@ -11,12 +11,12 @@ export interface Experience extends BaseTimelineData {
 export const ExperienceData: Experience[] = [
   {
     start: moment('May 1 2021'),
-    end: moment('August 1 2021'),
+    end: moment('Aug 1 2021'),
     title: 'Software Engineering Intern',
     company: 'Wellsheet',
     body: [
-      'Contributed and reviewed React-Rails code for frontend, backend, and infrastructure components.',
-      'Refactored the slowest segments of the app with optimizations that improved network calls by 50% using batch queries and frontend pagination.'
+      'Contributed and reviewed React/Ruby on Rails code for frontend, backend, and infrastructure components.',
+      'Refactored the slowest segments of the app with optimizations that improved API requests by ~50% using batch queries and pagination.'
     ],
     tech: [IconTypeEnum.Typescript, IconTypeEnum.React, IconTypeEnum.Ruby, IconTypeEnum.Rails, IconTypeEnum.Postgresql]
   },
@@ -62,7 +62,7 @@ export const ExperienceData: Experience[] = [
     company: "Akron's Children's Hospital",
     body: [
       'Voted team lead amongst 6 engineers to develop a multi-page web app with React following a strict HIPAA compliant product requirement.',
-      'Led and shipped a suite of features - dynamic timeline, genetic medical risk calculator, and interactive glossary.'
+      'Led and shipped a suite of features - dynamic treatment timeline, genetic medical risk calculator, and interactive glossary.'
     ],
     tech: [IconTypeEnum.React, IconTypeEnum.Typescript],
     links: [
