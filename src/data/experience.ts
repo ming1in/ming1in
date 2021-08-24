@@ -22,6 +22,7 @@ export const ExperienceData: Experience[] = [
   },
   {
     start: moment('Dec 1 2019'),
+    end: moment('May 1 2021'),
     company: 'Stache Solutions',
     title: 'Founder & Software Engineer',
     body: [

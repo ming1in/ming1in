@@ -1,5 +1,4 @@
-import moment from 'moment';
-import { Moment } from 'moment';
+import moment, { Moment } from 'moment';
 import { TimelineType } from '../types/enums/Timeline';
 import { BaseTimelineData } from '../types/interfaces/views';
 
