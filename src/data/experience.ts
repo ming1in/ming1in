@@ -11,10 +11,10 @@ export interface Experience extends BaseTimelineData {
 export const ExperienceData: Experience[] = [
   {
     start: moment('Sep 1 2021'),
-    title: 'Into to CS Teaching Assistant',
+    title: 'Intro to CS Teaching Assistant',
     company: 'Stevens Institute of Technology',
     body: [
-      'Taught undergraduate introductory programming course based in Python, hosted weekly labs, and reviewed assignments.',
+      'Taught undergraduate introductory programming course based on Python, hosted weekly labs, and reviewed assignments.',
       'Presented topics including design, algorithmic thinking, recursion, object-oriented programming, ethics in computer science, and basics computer systems'
     ],
     tech: [IconTypeEnum.Python]
